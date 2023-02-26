@@ -54,6 +54,12 @@ public class Player : MonoBehaviour
             grounded = true;
         }
     }
+    private void OnCollisionStay2D(Collision2D collision){
+        if(collision.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -78,7 +84,11 @@ public class Player : MonoBehaviour
     }
     public void Crecer()
     {
+    	if (vidas<=0){
     	gameObject.transform.localScale *= 1.5f;
+    	}else if (vidas>=1){
+    	Debug.Log("FUEGO!");
+    	}
     	vidas++;
     }
 }
