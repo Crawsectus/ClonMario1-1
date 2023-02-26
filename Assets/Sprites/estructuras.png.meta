@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff7bc05bc197a4641803b4876b0b0043
+guid: 50c1ca3f7eebd4946b9d3db369f4a453
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,11 +117,74 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_0
+      name: bandera
       rect:
         serializedVersion: 2
-        x: 80
-        y: 128
+        x: 0
+        y: 0
+        width: 16
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc1b5245c3d7bc47ae925866199c673
+      internalID: -1160820672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castillo
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1
+        width: 80
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b3e70ddec7b6f4ba1a9debdb2955bc
+      internalID: 417995756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tuberia
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 87
+        width: 32
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8097f78fbbd93e0488f6df17d8e59e61
+      internalID: 433027774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1x1
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -131,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24b9e512e5cdc54f8cf3e0d3e83d7f7
-      internalID: 1667699552
+      spriteID: ebd26c7128d30d64895a36ec3849901b
+      internalID: -1892516513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gold_1
+      name: 2x1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 16
-        height: 16
+        x: 560
+        y: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a39ce5ad1d0109149bcdd174bee97a62
-      internalID: 1270675213
+      spriteID: 57e991ace1c65ac488d164849e84e683
+      internalID: 1994769350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick_0
+      name: 3x3
       rect:
         serializedVersion: 2
-        x: 272
-        y: 128
-        width: 16
-        height: 16
+        x: 560
+        y: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eea8dd9ac7427344580b3fe57bb352f4
-      internalID: -813358452
+      spriteID: 06aad9d37d8913749b25e379e5a0749e
+      internalID: -147188204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick_1
+      name: moneda
       rect:
         serializedVersion: 2
-        x: 304
-        y: 128
-        width: 16
-        height: 16
+        x: 563
+        y: 108
+        width: 10
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,41 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb1c6db4a3bcb2945a009a9bf528c428
-      internalID: -391699350
+      spriteID: 53dcc389aa94d5b47b7d3f8d0462c8a3
+      internalID: 1803638408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brick_2
+      name: 2x2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19aad855203242342a263038f74abd7f
-      internalID: -2012911806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_brick
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 112
-        width: 16
-        height: 16
+        x: 576
+        y: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1926a718e9c47fc4798cd441684ceb47
-      internalID: -738241994
+      spriteID: a5867fbe480aab74f8349a9e6cecdaf0
+      internalID: 240262171
       vertices: []
       indices: 
       edges: []
@@ -253,12 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blue_brick: -738241994
-      brick_0: -813358452
-      brick_1: -391699350
-      brick_2: -2012911806
-      gold_0: 1667699552
-      gold_1: 1270675213
+      1x1: -1892516513
+      2x1: 1994769350
+      2x2: 240262171
+      3x3: -147188204
+      bandera: -1160820672
+      castillo: 417995756
+      moneda: 1803638408
+      tuberia: 433027774
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
