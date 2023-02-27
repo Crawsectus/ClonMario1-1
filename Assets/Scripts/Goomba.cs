@@ -9,12 +9,15 @@ public class Goomba : MonoBehaviour
     private Renderer enemyRenderer;
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private Collider2D col; // Componente Collider2D del objeto
+    public bool muelto=false;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
       rb = GetComponent<Rigidbody2D>(); // Obtener el componente Rigidbody2D del objeto
       col = GetComponent<Collider2D>(); // Obtener el componente Collider2D del objeto
       enemyRenderer = GetComponent<Renderer>();
+      anim= GetComponent<Animator>();
         
     }
 
@@ -26,7 +29,7 @@ public class Goomba : MonoBehaviour
             canMove = true;
         }
 
-        if (canMove)
+        if (canMove && muelto==false)
         {
           transform.position += new Vector3(-speed * Time.deltaTime, 0,0); 
         }
@@ -73,8 +76,18 @@ public class Goomba : MonoBehaviour
             }
         }
     }
-    public void Morir()
+    public void Morir(){
+    	StartCoroutine(MorirAhoraSi());
+    	Debug.Log("Todo se oscurece...");
+    }
+    IEnumerator MorirAhoraSi()
     {
-        Destroy(gameObject);
+           anim.SetBool("Muelto",true);
+           muelto=true;
+           Debug.Log("Tengo frio");
+           yield return new WaitForSeconds(0.3f);
+           Destroy(gameObject);
+           Debug.Log("Aeugh");
+        
     }
 }
