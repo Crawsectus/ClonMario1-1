@@ -12,7 +12,7 @@ public class LimitLeft : MonoBehaviour
         void OnCollisionEnter2D(Collision2D collision)
     	{
     		if (collision.gameObject.CompareTag("Enemy")){
-    			collision.gameObject.GetComponent<Goomba>().Morir();
+    			collision.gameObject.GetComponent<Goomba>().Destruir();
     		}
     	}
 }

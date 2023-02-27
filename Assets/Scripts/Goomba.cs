@@ -78,12 +78,14 @@ public class Goomba : MonoBehaviour
     }
     public void Morir(){
     	StartCoroutine(MorirAhoraSi());
-    	Debug.Log("Todo se oscurece...");
+    	anim.SetBool("Muelto",true);
+    	muelto=true;
+    }
+    public void Destruir(){
+	Destroy(gameObject);
     }
     IEnumerator MorirAhoraSi()
     {
-           anim.SetBool("Muelto",true);
-           muelto=true;
            Debug.Log("Tengo frio");
            yield return new WaitForSeconds(0.3f);
            Destroy(gameObject);
