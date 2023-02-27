@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class StartScreen : MonoBehaviour
 {
     public string gameSceneName; // El nombre de la escena del juego
@@ -23,6 +24,6 @@ public class StartScreen : MonoBehaviour
     public void StartGame()
     {
         // Cargamos la escena del juego
-        SceneManager.LoadScene("1-1");
+        SceneManager.LoadScene(gameSceneName);
     }
 }

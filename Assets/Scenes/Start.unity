@@ -155,7 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb91f0aaa7c7324a93fe39e1a22bf75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: 1-1
+  tiempoEspera: 3
+  siguienteEscena: PantallaStart
 --- !u!114 &34097500
 MonoBehaviour:
   m_ObjectHideFlags: 0
