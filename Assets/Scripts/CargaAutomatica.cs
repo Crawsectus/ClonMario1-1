@@ -1,29 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class StartScreen : MonoBehaviour
+public class CargaAutomatica : MonoBehaviour
 {
-    public string gameSceneName; // El nombre de la escena del juego
+    public float tiempoEspera = 3.0f; // Tiempo de espera antes de cargar la siguiente escena
+    public string siguienteEscena = "1-1"; // Nombre de la siguiente escena
 
     void Start()
     {
-        // Ocultamos el cursor
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        // Espera el tiempo especificado antes de cargar la siguiente escena
+        StartCoroutine(CargarEscenaDespuesDeEspera(tiempoEspera));
     }
 
-    void Update()
+    IEnumerator CargarEscenaDespuesDeEspera(float tiempo)
     {
-        // Si se oprime la tecla Enter o Return, iniciamos el juego
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            StartGame();
-        }
-    }
-    public void StartGame()
-    {
-        // Cargamos la escena del juego
-        SceneManager.LoadScene(gameSceneName);
+        yield return new WaitForSeconds(tiempo);
+        SceneManager.LoadScene(siguienteEscena);
     }
 }

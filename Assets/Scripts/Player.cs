@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 10f;
     public int puntos = 0;
     public int vidas=0;
+    public int monedas=0;
 
     private float initialX;
     
@@ -91,7 +92,12 @@ public class Player : MonoBehaviour
     {
     	if (vidas<=0){
         Destroy(gameObject);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("die");
+        /*
+        SceneManager.LoadScene("die", LoadSceneMode.Additive);
+        PantallaCarga pantallaCarga = FindObjectOfType<PantallaDie>();
+        pantallaCarga.mostrarDatos(vidas, puntos, monedas);
+        */
         }else{
           vidas--;
           gameObject.transform.localScale *= 0.75f;
