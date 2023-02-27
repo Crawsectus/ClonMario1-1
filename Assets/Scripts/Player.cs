@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     public float jumpForce = 10f;
     public int puntos = 0;
     public int vidas=0;
+
+    private float initialX;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +44,19 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
         }
         // Hacer que la cámara siga al jugador en el eje X
-        mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+
+        // Verificar si el jugador ha avanzado hacia la derecha
+        initialX = mainCamera.transform.position.x;
+        if (transform.position.x > initialX) {
+            // Actualizar la posición de la cámara sólo si el jugador ha avanzado hacia la derecha
+            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+            //limitLeft.transform.position = new Vector3(transform.position.x, limitLeft.transform.position.y, limitLeft.transform.position.z);
+        }
+        else {
+            // Mantener la posición x de la cámara en su valor inicial si el jugador no ha avanzado hacia la derecha
+            mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        }
         if (transform.position.y < -2)
         {
             Destroy(gameObject);
