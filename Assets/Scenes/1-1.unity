@@ -9123,7 +9123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129181787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.891, y: 0.049, z: 0.44291002}
+  m_LocalPosition: {x: -5.675, y: 0.051, z: 0.44291002}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9147,7 +9147,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 0.8}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9984,8 +9984,9 @@ GameObject:
   - component: {fileID: 1223253671}
   - component: {fileID: 1223253670}
   - component: {fileID: 1223253669}
+  - component: {fileID: 1223253672}
   m_Layer: 0
-  m_Name: Mario_11
+  m_Name: Mario
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10051,7 +10052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.218, y: 0.789, z: 0}
+  m_LocalPosition: {x: -16.687, y: 0.411, z: 0}
   m_LocalScale: {x: 0.084931396, y: 0.084931396, z: 0.084931396}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10120,8 +10121,34 @@ MonoBehaviour:
   grounded: 0
   moveSpeed: 1
   jumpForce: 4
+  vida: 0
+  salto: 0
+  moverLeft: 0
+  moverRight: 0
+  muelto: 0
   puntos: 0
-  vidas: 1
+  monedas: 0
+  vidas: 3
+--- !u!95 &1223253672
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223253666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a03c27a205068371b857d78d0f850bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1226738261
 GameObject:
   m_ObjectHideFlags: 0
