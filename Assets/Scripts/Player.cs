@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
     public int puntos;
     public int monedas;
     public int vidas;
-   
-
+   //holaaaaaaa xcompileeee
+	
 
 
     // Start is called before the first frame update
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
         {
             vidas = PlayerPrefs.GetInt("vidas");
         }
+        	
     }
 
     // Update is called once per frame
@@ -179,5 +180,8 @@ public class Player : MonoBehaviour
     	Debug.Log("FUEGO!");
     	}
     	vida++;
+    }
+    public int getTam(){
+       return vida;
     }
 }
