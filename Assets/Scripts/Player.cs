@@ -169,7 +169,9 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("die");
     }
     private void GameOver()
-    {
+    {   
+        monedas=0;
+        PlayerPrefs.SetInt("monedas", monedas);
         // Cargar la siguiente escena
         SceneManager.LoadScene("GameOver");
     }
