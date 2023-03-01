@@ -642,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidas: {fileID: 727220662}
+  monedas: {fileID: 1542099488}
 --- !u!4 &923357844
 Transform:
   m_ObjectHideFlags: 0

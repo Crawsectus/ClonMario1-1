@@ -138,6 +138,10 @@ public class Player : MonoBehaviour
         {
             Morir();
         }
+        if (collision.gameObject.CompareTag("Subida")){
+                transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
+                mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -169,7 +173,9 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("die");
     }
     private void GameOver()
-    {
+    {   
+        monedas=0;
+        PlayerPrefs.SetInt("monedas", monedas);
         // Cargar la siguiente escena
         SceneManager.LoadScene("GameOver");
     }
@@ -219,12 +225,6 @@ public class Player : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.S)){
                 transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
                 mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
-            }
-        }
-        if (other.gameObject.CompareTag("Subida")){
-            if(Input.GetKeyDown(KeyCode.D)){
-                transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
-                mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
             }
         }
     }

@@ -11,15 +11,15 @@ public class Koopa : MonoBehaviour
     private Collider2D col; // Componente Collider2D del objeto
     public bool muelto=false;
     private Animator anim;
-    public Sprite caparazon;
-    SpriteRenderer spriteRenderer;
+    public GameObject caparazon;
+    private SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
       rb = GetComponent<Rigidbody2D>(); // Obtener el componente Rigidbody2D del objeto
       col = GetComponent<Collider2D>(); // Obtener el componente Collider2D del objeto
+      sr = GetComponent<SpriteRenderer>();
       enemyRenderer = GetComponent<Renderer>();
-      spriteRenderer = GetComponent<SpriteRenderer>();
       anim= GetComponent<Animator>();
         
     }
@@ -40,13 +40,18 @@ public class Koopa : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Si el objeto colisiona con otro objeto que tenga un Collider2D
-        if (collision.collider.GetComponent<Collider2D>())
+        if (collision.gameObject.CompareTag("Ground"))
         {
             // Comprobar si la normal de la colisión está en la dirección horizontal
             if (Mathf.Abs(collision.contacts[0].normal.y) < 0.5f)
             {
                 // Mover el objeto al otro lado de la pared en el eje Y (arriba y abajo)
                 speed= -speed;
+                if  (sr.flipX == false){
+                sr.flipX = true;
+                }else{
+                    sr.flipX = false;
+                }
             }
         }
 
@@ -63,7 +68,9 @@ public class Koopa : MonoBehaviour
             {
                 // El jugador ha tocado la parte inferior del BoxCollider2D
                 Debug.Log("abajo");
-                spriteRenderer.sprite = caparazon;
+                transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+                GameObject caparazonObject = Instantiate(caparazon, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
             else if (contact.normal.x > 0)
             {
