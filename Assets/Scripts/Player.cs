@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
             puntos = PlayerPrefs.GetInt("puntos");
         }
         // Monedas
-        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") < 0)
+        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 19)
         {
             monedas = 0;
             PlayerPrefs.SetInt("monedas", monedas);
