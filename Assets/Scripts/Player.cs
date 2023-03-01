@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
         col = GetComponent<Collider2D>();
-        if (!PlayerPrefs.HasKey("vidas"))
+        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0)
         {
             vidas = 3;
             PlayerPrefs.SetInt("vidas", vidas);
