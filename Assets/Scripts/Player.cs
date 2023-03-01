@@ -46,63 +46,67 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        if (!Input.anyKey){
-            anim.SetBool("isWalking",false);
-            moverRight=false;
-            moverLeft=false;
-            //anim.SetBool("isJumping",false);
-        }
-        // Cambiar la dirección del sprite del jugador según la dirección del movimiento
-        if (moveInput > 0 && muelto==false)
+        if (muelto == false)
         {
-            anim.SetBool("isWalking",true);
-            sr.flipX = false;
-            moverRight=true;
-            if (moverLeft==true){
-              Debug.Log("Debería reproducirse el pasito");
-              StartCoroutine(Pasito());
-            }              
-        }
-        else if (moveInput < 0 && muelto==false)
-        {
-            anim.SetBool("isWalking",true);
-            sr.flipX = true;
-            moverLeft=true;
-            if (moverRight==true){
-              Debug.Log("Debería reproducirse el pasito");
-              StartCoroutine(Pasito());
+            float moveInput = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+            if (!Input.anyKey){
+                anim.SetBool("isWalking",false);
+                moverRight=false;
+                moverLeft=false;
+                //anim.SetBool("isJumping",false);
+            }
+            // Cambiar la dirección del sprite del jugador según la dirección del movimiento
+            if (moveInput > 0 && muelto==false)
+            {
+                anim.SetBool("isWalking",true);
+                sr.flipX = false;
+                moverRight=true;
+                if (moverLeft==true){
+                Debug.Log("Debería reproducirse el pasito");
+                StartCoroutine(Pasito());
+                }              
+            }
+            else if (moveInput < 0 && muelto==false)
+            {
+                anim.SetBool("isWalking",true);
+                sr.flipX = true;
+                moverLeft=true;
+                if (moverRight==true){
+                Debug.Log("Debería reproducirse el pasito");
+                StartCoroutine(Pasito());
+                }
+            }
+            //salto
+            if(Input.GetKeyDown(KeyCode.Space) && grounded == true && muelto==false)
+            {
+                rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
+                salto=true;
+            }
+            if(salto==true){
+                anim.SetBool("isWalking",false);
+                anim.SetBool("isJumping",true);
+            }
+            // Hacer que la cámara siga al jugador en el eje X
+            //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+
+            // Verificar si el jugador ha avanzado hacia la derecha
+            initialX = mainCamera.transform.position.x;
+            if (transform.position.x > initialX) {
+                // Actualizar la posición de la cámara sólo si el jugador ha avanzado hacia la derecha
+                mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+                //limitLeft.transform.position = new Vector3(transform.position.x, limitLeft.transform.position.y, limitLeft.transform.position.z);
+            }
+            else {
+                // Mantener la posición x de la cámara en su valor inicial si el jugador no ha avanzado hacia la derecha
+                mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
+            }
+            if (transform.position.y < -2)
+            {
+                Morir();
             }
         }
-        //salto
-        if(Input.GetKeyDown(KeyCode.Space) && grounded == true && muelto==false)
-        {
-            rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
-            salto=true;
-        }
-        if(salto==true){
-            anim.SetBool("isWalking",false);
-            anim.SetBool("isJumping",true);
-        }
-        // Hacer que la cámara siga al jugador en el eje X
-        //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
-
-        // Verificar si el jugador ha avanzado hacia la derecha
-        initialX = mainCamera.transform.position.x;
-        if (transform.position.x > initialX) {
-            // Actualizar la posición de la cámara sólo si el jugador ha avanzado hacia la derecha
-            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
-            //limitLeft.transform.position = new Vector3(transform.position.x, limitLeft.transform.position.y, limitLeft.transform.position.z);
-        }
-        else {
-            // Mantener la posición x de la cámara en su valor inicial si el jugador no ha avanzado hacia la derecha
-            mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
-        }
-        if (transform.position.y < -2)
-        {
-            Morir();
-        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -142,7 +146,7 @@ public class Player : MonoBehaviour
     { 
     	if (vida<=0){
             anim.SetBool("isDead",true);
-            
+            GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation);
             rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
             col.isTrigger = true;
             muelto=true;
