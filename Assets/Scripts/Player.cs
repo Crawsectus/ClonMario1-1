@@ -129,20 +129,31 @@ public class Player : MonoBehaviour
             anim.SetBool("isJumping",true);
         }
     }
+    private void Die()
+    {
+        // Cargar la siguiente escena
+        SceneManager.LoadScene("die");
+    }
+    private void GameOver()
+    {
+        // Cargar la siguiente escena
+        SceneManager.LoadScene("GameOver");
+    }
     public void Morir()
     { 
     	if (vida<=0){
             anim.SetBool("isDead",true);
+            
             rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
             col.isTrigger = true;
             muelto=true;
             vidas--;
             PlayerPrefs.SetInt("vidas", vidas);
             if (vidas <= 0){
-                SceneManager.LoadScene("GameOver");
+                Invoke("GameOver", 1f);
             }
             else{
-                SceneManager.LoadScene("die");
+                Invoke("Die", 1f);
             }
         }else{
             vida--;
