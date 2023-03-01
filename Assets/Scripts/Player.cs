@@ -180,4 +180,12 @@ public class Player : MonoBehaviour
     public int getTam(){
        return vida;
     }
+    void OnTriggerStay2D(Collider2D other){
+        if (other.gameObject.CompareTag("Bajada")){
+            if(Input.GetKeyDown(KeyCode.S)){
+                transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
+                mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
+            }
+        }
+    }
 }
