@@ -123,10 +123,6 @@ public class Player : MonoBehaviour
                 // Mantener la posición x de la cámara en su valor inicial si el jugador no ha avanzado hacia la derecha
                 mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
             }
-            if (transform.position.y < -2)
-            {
-                Morir();
-            }
         }
         
     }
@@ -137,6 +133,10 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             monedas++;
             PlayerPrefs.SetInt("monedas", monedas);
+        }
+        if (collision.CompareTag("Vacio"))
+        {
+            Morir();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -213,5 +213,19 @@ public class Player : MonoBehaviour
     }
     public int getTam(){
        return vida;
+    }
+    void OnTriggerStay2D(Collider2D other){
+        if (other.gameObject.CompareTag("Bajada")){
+            if(Input.GetKeyDown(KeyCode.S)){
+                transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
+                mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
+            }
+        }
+        if (other.gameObject.CompareTag("Subida")){
+            if(Input.GetKeyDown(KeyCode.D)){
+                transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
+                mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
+            }
+        }
     }
 }
