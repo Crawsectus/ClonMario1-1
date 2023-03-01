@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Bricks : MonoBehaviour
+{
+    private Collider2D col; // Componente Collider2D del objeto
+    // Start is called before the first frame update
+    void Start()
+    {
+        col = GetComponent<Collider2D>(); // Obtener el componente Collider2D del objeto
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player")){
+        ContactPoint2D contact = collision.contacts[0];
+        float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
+        if (dotProduct > 0.5f)
+         {
+           int tam= collision.gameObject.GetComponent<Player>().getTam();
+           if (tam<=0){
+              Debug.Log("El bloque debe dar un saltito");
+           }else{
+              Destroy(gameObject);
+           }
+         }
+        } 
+      }
+  }

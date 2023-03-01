@@ -6908,6 +6908,8 @@ GameObject:
   - component: {fileID: 832970628}
   - component: {fileID: 832970629}
   - component: {fileID: 832970630}
+  - component: {fileID: 832970631}
+  - component: {fileID: 832970632}
   m_Layer: 0
   m_Name: brick_0
   m_TagString: Ground
@@ -7008,6 +7010,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &832970631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832970627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae60e0e4fda36082480ec3f76fb0772e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &832970632
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832970627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 209184e740a774a7aa1f6ae4f1acf89e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &873200004
 GameObject:
   m_ObjectHideFlags: 0

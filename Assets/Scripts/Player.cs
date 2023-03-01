@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
     public int puntos;
     public int monedas;
     public int vidas;
-   
-
+   //holaaaaaaa xcompileeee
+	
 
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
         col = GetComponent<Collider2D>();
-        if (!PlayerPrefs.HasKey("vidas"))
+        if (!PlayerPrefs.HasKey("vidas") || vidas<=0)
         {
             vidas = 3;
             PlayerPrefs.SetInt("vidas", vidas);
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
         {
             vidas = PlayerPrefs.GetInt("vidas");
         }
+        	
     }
 
     // Update is called once per frame
@@ -164,5 +165,8 @@ public class Player : MonoBehaviour
     	Debug.Log("FUEGO!");
     	}
     	vida++;
+    }
+    public int getTam(){
+       return vida;
     }
 }
