@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 11256491}
   m_Layer: 0
   m_Name: moneda_sub (17)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 37064788}
   m_Layer: 0
   m_Name: moneda_sub (16)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 75516977}
   m_Layer: 0
   m_Name: moneda_sub (15)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1637,7 +1637,7 @@ GameObject:
   - component: {fileID: 117698028}
   m_Layer: 0
   m_Name: moneda_sub
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 134763721}
   m_Layer: 0
   m_Name: moneda_sub (12)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2676,7 +2676,7 @@ GameObject:
   - component: {fileID: 250579160}
   m_Layer: 0
   m_Name: moneda_sub (11)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3606,7 +3606,7 @@ GameObject:
   - component: {fileID: 352344136}
   m_Layer: 0
   m_Name: blue_brick (23)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3813,7 +3813,7 @@ GameObject:
   - component: {fileID: 382987418}
   m_Layer: 0
   m_Name: blue_brick (36)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4755,7 +4755,7 @@ GameObject:
   - component: {fileID: 455949480}
   m_Layer: 0
   m_Name: moneda_sub (8)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5279,7 +5279,7 @@ GameObject:
   - component: {fileID: 495098579}
   m_Layer: 0
   m_Name: blue_brick (22)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5602,7 +5602,7 @@ GameObject:
   - component: {fileID: 556697359}
   m_Layer: 0
   m_Name: moneda_sub (4)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5734,7 +5734,7 @@ GameObject:
   - component: {fileID: 590066124}
   m_Layer: 0
   m_Name: moneda_sub (2)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5993,7 +5993,7 @@ GameObject:
   - component: {fileID: 647102304}
   m_Layer: 0
   m_Name: moneda_sub (13)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6268,7 +6268,7 @@ GameObject:
   - component: {fileID: 672849003}
   m_Layer: 0
   m_Name: blue_brick (28)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6665,7 +6665,7 @@ GameObject:
   - component: {fileID: 704115552}
   m_Layer: 0
   m_Name: blue_brick (34)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7238,7 +7238,7 @@ GameObject:
   - component: {fileID: 764163819}
   m_Layer: 0
   m_Name: blue_brick (25)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7613,7 +7613,7 @@ GameObject:
   - component: {fileID: 769818303}
   m_Layer: 0
   m_Name: suelo_sub
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7626,7 +7626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769818300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.929639, y: -2.2370114, z: 0}
+  m_LocalPosition: {x: -7.929639, y: -2.226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7723,7 +7723,7 @@ GameObject:
   - component: {fileID: 792424009}
   m_Layer: 0
   m_Name: blue_brick (37)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10339,7 +10339,7 @@ GameObject:
   - component: {fileID: 1126333942}
   m_Layer: 0
   m_Name: blue_brick (31)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11091,7 +11091,7 @@ GameObject:
   - component: {fileID: 1175068703}
   m_Layer: 0
   m_Name: blue_brick (18)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11644,7 +11644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.82, y: -1.85, z: 0}
+  m_LocalPosition: {x: -8.82, y: -0.397, z: 0}
   m_LocalScale: {x: 0.084931396, y: 0.084931396, z: 0.084931396}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12478,7 +12478,7 @@ GameObject:
   - component: {fileID: 1302494284}
   m_Layer: 0
   m_Name: moneda_sub (6)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13127,7 +13127,7 @@ GameObject:
   - component: {fileID: 1331130167}
   m_Layer: 0
   m_Name: blue_brick (19)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13211,7 +13211,7 @@ GameObject:
   - component: {fileID: 1333462859}
   m_Layer: 0
   m_Name: blue_brick (35)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13468,7 +13468,7 @@ GameObject:
   - component: {fileID: 1372191809}
   m_Layer: 0
   m_Name: moneda_sub (9)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13598,7 +13598,7 @@ GameObject:
   - component: {fileID: 1375067384}
   m_Layer: 0
   m_Name: blue_brick (21)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14082,7 +14082,7 @@ GameObject:
   - component: {fileID: 1388316253}
   m_Layer: 0
   m_Name: moneda_sub (1)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14296,7 +14296,7 @@ GameObject:
   - component: {fileID: 1401642663}
   m_Layer: 0
   m_Name: blue_brick (24)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14382,7 +14382,7 @@ GameObject:
   - component: {fileID: 1402225106}
   m_Layer: 0
   m_Name: moneda_sub (5)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14562,7 +14562,7 @@ GameObject:
   - component: {fileID: 1416919422}
   m_Layer: 0
   m_Name: blue_brick (32)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14791,7 +14791,7 @@ GameObject:
   - component: {fileID: 1440291791}
   m_Layer: 0
   m_Name: blue_brick (30)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15020,7 +15020,7 @@ GameObject:
   - component: {fileID: 1476582941}
   m_Layer: 0
   m_Name: blue_brick (20)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15649,7 +15649,7 @@ GameObject:
   - component: {fileID: 1573579123}
   m_Layer: 0
   m_Name: blue_brick (33)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15928,7 +15928,7 @@ GameObject:
   - component: {fileID: 1599267176}
   m_Layer: 0
   m_Name: blue_brick (29)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16912,7 +16912,7 @@ GameObject:
   - component: {fileID: 1704833775}
   m_Layer: 0
   m_Name: blue_brick (26)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16998,7 +16998,7 @@ GameObject:
   - component: {fileID: 1717788109}
   m_Layer: 0
   m_Name: moneda_sub (18)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17307,7 +17307,7 @@ GameObject:
   - component: {fileID: 1777776184}
   m_Layer: 0
   m_Name: moneda_sub (7)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17626,7 +17626,7 @@ GameObject:
   - component: {fileID: 1838251905}
   m_Layer: 0
   m_Name: blue_brick (38)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18977,7 +18977,7 @@ GameObject:
   - component: {fileID: 2014027640}
   m_Layer: 0
   m_Name: moneda_sub (10)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19193,7 +19193,7 @@ GameObject:
   - component: {fileID: 2020723836}
   m_Layer: 0
   m_Name: moneda_sub (14)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19323,7 +19323,7 @@ GameObject:
   - component: {fileID: 2022164805}
   m_Layer: 0
   m_Name: blue_brick (27)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20230,7 +20230,7 @@ GameObject:
   - component: {fileID: 2109065733}
   m_Layer: 0
   m_Name: moneda_sub (3)
-  m_TagString: Untagged
+  m_TagString: Moneda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

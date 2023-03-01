@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
         col = GetComponent<Collider2D>();
+        // vidas
         if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0)
         {
             vidas = 3;
@@ -40,6 +41,26 @@ public class Player : MonoBehaviour
         else
         {
             vidas = PlayerPrefs.GetInt("vidas");
+        }
+        // puntos
+        if (!PlayerPrefs.HasKey("puntos") || PlayerPrefs.GetInt("puntos") < 0)
+        {
+            puntos = 0;
+            PlayerPrefs.SetInt("puntos", puntos);
+        }
+        else
+        {
+            puntos = PlayerPrefs.GetInt("puntos");
+        }
+        // Monedas
+        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") < 0)
+        {
+            monedas = 0;
+            PlayerPrefs.SetInt("monedas", monedas);
+        }
+        else
+        {
+            monedas = PlayerPrefs.GetInt("monedas");
         }
         	
     }
@@ -108,6 +129,15 @@ public class Player : MonoBehaviour
             }
         }
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Moneda"))
+        {
+            Destroy(collision.gameObject);
+            monedas++;
+            PlayerPrefs.SetInt("monedas", monedas);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
