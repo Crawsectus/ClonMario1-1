@@ -10,14 +10,15 @@ TagManager:
   - Moneda
   - Subida
   - Vacio
+  - Caparazon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Jugador
   - Water
   - UI
-  - 
+  - Pared
   - 
   - 
   - 
