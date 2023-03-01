@@ -11,6 +11,7 @@ TagManager:
   - Subida
   - Vacio
   - Caparazon
+  - Hongo
   layers:
   - Default
   - TransparentFX
