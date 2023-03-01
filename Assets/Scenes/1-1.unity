@@ -12124,6 +12124,7 @@ GameObject:
   - component: {fileID: 1223253670}
   - component: {fileID: 1223253669}
   - component: {fileID: 1223253672}
+  - component: {fileID: 1223253673}
   m_Layer: 3
   m_Name: Mario
   m_TagString: Player
@@ -12260,7 +12261,7 @@ MonoBehaviour:
   grounded: 0
   moveSpeed: 1
   jumpForce: 4
-  vida: 5
+  vida: 1
   salto: 0
   moverLeft: 0
   moverRight: 0

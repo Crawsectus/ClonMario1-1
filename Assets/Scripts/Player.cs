@@ -201,8 +201,9 @@ public class Player : MonoBehaviour
         }
     }
     IEnumerator Pasito(){
-        anim.SetBool("Pasito",true);
-        anim.SetBool("isWalking",false);
+        //anim.SetBool("Pasito",true);
+        //anim.SetBool("isWalking",false);
+        anim.SetTrigger("Pasito");
         Debug.Log("ANIMATEEEEEEE");
     	yield return new WaitForSeconds(0.25f);
     	anim.SetBool("Pasito",false);
