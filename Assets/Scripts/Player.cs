@@ -195,9 +195,11 @@ public class Player : MonoBehaviour
             else{
                 Invoke("Die", 1f);
             }
+        }else if (vida==1){
+            gameObject.transform.localScale *= 0.75f;
+            vida--;
         }else{
             vida--;
-            gameObject.transform.localScale *= 0.75f;
         }
     }
     IEnumerator Pasito(){

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GoldMushroom : MonoBehaviour
 {
     public GameObject hongoPrefab; // GameObject de la moneda que aparecerá cuando el jugador golpee el bloque.
+    public GameObject florPrefab; // GameObject de la moneda que aparecerá cuando el jugador golpee el bloque.
     private Collider2D col; // Componente Collider2D del objeto
     private Animator anim;
     private bool flag=false;
@@ -33,6 +34,9 @@ public class GoldMushroom : MonoBehaviour
                 if (tam<=0){
                     Vector3 posHongo=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                     GameObject hongoObject = Instantiate(hongoPrefab, posHongo, Quaternion.identity);
+                }else{
+                    Vector3 posFlor=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
+                    GameObject florObject = Instantiate(florPrefab, posFlor, Quaternion.identity);
                 }
                 flagSpawn=true;
             }
