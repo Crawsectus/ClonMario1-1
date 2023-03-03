@@ -7,6 +7,7 @@ public class Gold : MonoBehaviour
     private Collider2D col; // Componente Collider2D del objeto
     private Animator anim;
     private bool flag=false;
+    public AudioSource audioGold;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Gold : MonoBehaviour
         float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
         if (dotProduct > 0.5f)
          {
+            audioGold.Play();
             StartCoroutine(Salto());
          }
         } 

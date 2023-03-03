@@ -10,6 +10,7 @@ public class GoldMushroom : MonoBehaviour
     private Animator anim;
     private bool flag=false;
     private bool flagSpawn=false;
+    public AudioSource audioAparecer;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class GoldMushroom : MonoBehaviour
          {
             if (flagSpawn==false){
                 int tam=collision.gameObject.GetComponent<Player>().getTam();
+                audioAparecer.Play();
                 if (tam<=0){
                     Vector3 posHongo=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                     GameObject hongoObject = Instantiate(hongoPrefab, posHongo, Quaternion.identity);

@@ -12,6 +12,8 @@ TagManager:
   - Vacio
   - Caparazon
   - Hongo
+  - Rango
+  - Fuego
   layers:
   - Default
   - TransparentFX
@@ -22,9 +24,9 @@ TagManager:
   - Pared
   - Buffs
   - Terrain
-  - 
-  - 
-  - 
+  - Muerto
+  - Suelo
+  - Fuego
   - 
   - 
   - 

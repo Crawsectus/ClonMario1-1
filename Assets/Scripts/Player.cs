@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     Rigidbody2D  rb;
+    public AudioSource audioMain;
+    public AudioSource audioMuerte;
+    public AudioSource audioSalto;
+    public AudioSource audioTubo;
+    public AudioSource audioMoneda;
+    public AudioSource audioCrecer;
+    public AudioSource audioVida;
+    public AudioSource audioFuego;
     public bool grounded = false;
     private Camera mainCamera;
     private SpriteRenderer sr;
@@ -20,13 +28,17 @@ public class Player : MonoBehaviour
     public int puntos;
     public int monedas;
     public int vidas;
+    private bool fuego=false;
+    public GameObject bolaFuego;
+    public int contador=0;
+    public bool CD=false;
    //holaaaaaaa xcompileeee
 	
 
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {   audioMain.Play();
         rb=GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
         sr = GetComponent<SpriteRenderer>();
@@ -102,6 +114,7 @@ public class Player : MonoBehaviour
             //salto
             if(Input.GetKeyDown(KeyCode.Space) && grounded == true && muelto==false)
             {
+                audioSalto.Play();
                 rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
                 salto=true;
             }
@@ -123,6 +136,27 @@ public class Player : MonoBehaviour
                 // Mantener la posición x de la cámara en su valor inicial si el jugador no ha avanzado hacia la derecha
                 mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
             }
+            if (fuego==true){
+                if(Input.GetKeyDown(KeyCode.P)){
+                    if (contador<=1 && CD==false){
+                    audioFuego.Play();    
+                    if (sr.flipX==false){
+                        Vector3 posFuego=new Vector3(transform.position.x+ 0.2f, transform.position.y, transform.position.z);
+                        GameObject fuegoObject = Instantiate(bolaFuego, posFuego, Quaternion.identity);
+                        fuegoObject.GetComponent<bolaFuego>().Mover(true);
+                    }else{
+                        Vector3 posFuego=new Vector3(transform.position.x- 0.2f, transform.position.y, transform.position.z);
+                        GameObject fuegoObject = Instantiate(bolaFuego, posFuego, Quaternion.identity);
+                        fuegoObject.GetComponent<bolaFuego>().Mover(false);
+                    }
+                    contador++;
+                    }else if(contador>1){
+                        CD=true;
+                        contador=0;
+                        StartCoroutine(cooldown());
+                    }
+                }
+            }
         }
         
     }
@@ -130,15 +164,17 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Moneda"))
         {
+            audioMoneda.Play();
             Destroy(collision.gameObject);
             monedas++;
             PlayerPrefs.SetInt("monedas", monedas);
         }
         if (collision.CompareTag("Vacio"))
         {
-            Morir();
+            Morir(false);
         }
         if (collision.gameObject.CompareTag("Subida")){
+                audioTubo.Play();
                 transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
                 mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
         }
@@ -179,27 +215,45 @@ public class Player : MonoBehaviour
         // Cargar la siguiente escena
         SceneManager.LoadScene("GameOver");
     }
-    public void Morir()
+    public void Morir(bool animar)
     { 
+        if (animar==false){
+            audioMain.Stop();
+            gameObject.layer = LayerMask.NameToLayer("Muerto");
+            audioMuerte.Play();
+            vidas--;
+            PlayerPrefs.SetInt("vidas", vidas);
+            if (vidas <= 0){
+                Invoke("GameOver", 2.5f);
+            }
+            else{
+                Invoke("Die", 2.5f);
+            } 
+        }else{
     	if (vida<=0){
+            audioMain.Stop();
+            gameObject.layer = LayerMask.NameToLayer("Muerto");
+            audioMuerte.Play();
             anim.SetBool("isDead",true);
             GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation);
             rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
-            col.isTrigger = true;
             muelto=true;
             vidas--;
             PlayerPrefs.SetInt("vidas", vidas);
             if (vidas <= 0){
-                Invoke("GameOver", 1f);
+                Invoke("GameOver", 2.5f);
             }
             else{
-                Invoke("Die", 1f);
+                Invoke("Die", 2.5f);
             }
         }else if (vida==1){
             gameObject.transform.localScale *= 0.75f;
+            fuego=false;
             vida--;
         }else{
+            fuego=false;
             vida--;
+        }
         }
     }
     IEnumerator Pasito(){
@@ -211,21 +265,32 @@ public class Player : MonoBehaviour
     	anim.SetBool("Pasito",false);
     	anim.SetBool("isWalking",true);
     }
+    IEnumerator cooldown(){
+      yield return new WaitForSeconds(0.2f);  
+      CD=false;
+    }
     public void Crecer()
     {
+        audioCrecer.Play();
     	if (vida<=0){
-    	gameObject.transform.localScale *= 1.5f;
+    	    gameObject.transform.localScale *= 1.5f;
     	}else if (vida>=1){
-    	Debug.Log("FUEGO!");
+            fuego=true;
     	}
     	vida++;
     }
     public int getTam(){
        return vida;
     }
+    public void AumentarVidas(){
+        audioVida.Play();
+        vidas++;
+        PlayerPrefs.SetInt("vidas", vidas);
+    }
     void OnTriggerStay2D(Collider2D other){
         if (other.gameObject.CompareTag("Bajada")){
             if(Input.GetKeyDown(KeyCode.S)){
+                audioTubo.Play();
                 transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
                 mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
             }

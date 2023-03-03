@@ -167,6 +167,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Koopa_0
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a537fff0e9d4ef784006d8c50fd2e8
+      internalID: 422402954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Koopa_1
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 209
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c4febed8a00c97e897d04f348d3451
+      internalID: 79284397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Koopa_2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 184
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671dd54821730bdf3a0eee26dfda4696
+      internalID: -2064437842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Koopa_3
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 184
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c718d30808bcaf76a0a65a64d3e1162
+      internalID: 1844605212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -181,6 +265,10 @@ TextureImporter:
       Browser Games - Super Mario Bros Crossover - Super Mario Bros_0: -1303297826
       Browser Games - Super Mario Bros Crossover - Super Mario Bros_1: 1705308722
       Browser Games - Super Mario Bros Crossover - Super Mario Bros_2: -1789211879
+      Koopa_0: 422402954
+      Koopa_1: 79284397
+      Koopa_2: -2064437842
+      Koopa_3: 1844605212
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

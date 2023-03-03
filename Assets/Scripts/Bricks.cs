@@ -6,6 +6,7 @@ public class Bricks : MonoBehaviour
 {
     private Collider2D col; // Componente Collider2D del objeto
     private Animator anim;
+    public AudioSource audioDestruir;
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class Bricks : MonoBehaviour
            if (tam<=0){
               StartCoroutine(Salto());
            }else{
+              audioDestruir.Play();
               StartCoroutine(Destruir());
            }
          }

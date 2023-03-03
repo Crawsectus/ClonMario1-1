@@ -56,7 +56,7 @@ public class Caparazon : MonoBehaviour
                     speed=-speed;
                     canMove=true;
                 }else{
-                   collision.gameObject.GetComponent<Player>().Morir();
+                   collision.gameObject.GetComponent<Player>().Morir(true);
                 }
             }else if (contact.normal.x < 0)
             {
@@ -65,7 +65,7 @@ public class Caparazon : MonoBehaviour
                 if (canMove==false){
                     canMove=true;
                 }else{
-                   collision.gameObject.GetComponent<Player>().Morir();
+                   collision.gameObject.GetComponent<Player>().Morir(true);
                 }
             }
         }
