@@ -5,7 +5,7 @@ using UnityEngine;
 public class Caparazon : MonoBehaviour
 {
     public float speed = 1.0f;	
-    private bool canMove = false;
+    public bool canMove = false;
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private Collider2D col; // Componente Collider2D del objeto
     // Start is called before the first frame update

@@ -8,6 +8,10 @@ public class Gold : MonoBehaviour
     private Animator anim;
     private bool flag=false;
     public AudioSource audioGold;
+    public float velocidadMoneda = 2f; // La velocidad a la que la moneda se moverá hacia arriba.
+    public GameObject monedaPrefab; // GameObject de la moneda que aparecerá cuando el jugador golpee el bloque.
+    //public float alturaMoneda = 1f; // La altura a la que la moneda se moverá hacia arriba.
+    public int contador=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,18 +31,24 @@ public class Gold : MonoBehaviour
         float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
         if (dotProduct > 0.5f)
          {
-            audioGold.Play();
             StartCoroutine(Salto());
          }
         } 
       }
       IEnumerator Salto(){
         if (flag==false){
-            flag=true;
+            if (contador<=0){
+                flag=true;
+                anim.SetBool("isDead",true);
+            }
+            audioGold.Play();
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
-            anim.SetBool("isDead",true);
+            GameObject monedaObject = Instantiate(monedaPrefab, transform.position, Quaternion.identity);
+            monedaObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadMoneda);
             yield return new WaitForSeconds(0.25f);
+            Destroy(monedaObject);
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
+            contador--;
         }
       }
   }

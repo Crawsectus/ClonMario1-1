@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     public AudioSource audioMoneda;
     public AudioSource audioCrecer;
     public AudioSource audioVida;
-    public AudioSource audioFuego;
+    public AudioSource audioFuego; 
+    public AudioSource audioEstrella;
     public bool grounded = false;
     private Camera mainCamera;
     private SpriteRenderer sr;
@@ -250,9 +251,11 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale *= 0.75f;
             fuego=false;
             vida--;
+            StartCoroutine(Invencibilidad(1f,false));
         }else{
             fuego=false;
             vida--;
+            StartCoroutine(Invencibilidad(0.5f,false));
         }
         }
     }
@@ -294,6 +297,26 @@ public class Player : MonoBehaviour
                 transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
                 mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
             }
+        }
+    }
+    public void Estrella(){
+        audioMain.Pause();
+        audioEstrella.Play();
+        StartCoroutine(Invencibilidad(10f,true));
+    }
+    IEnumerator Invencibilidad(float tiempo,bool modo){
+        if (modo==true){
+            gameObject.tag="LSD";
+            moveSpeed=moveSpeed+1.5f;
+        }else{
+            gameObject.tag="Invencible";
+        }
+        yield return new WaitForSeconds(tiempo); 
+        gameObject.tag="Player";
+        if (modo==true){
+            audioEstrella.Stop();
+            audioMain.UnPause();
+            moveSpeed=moveSpeed-1.5f;
         }
     }
 }

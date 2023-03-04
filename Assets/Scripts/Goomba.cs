@@ -52,6 +52,9 @@ public class Goomba : MonoBehaviour
         if (collision.gameObject.CompareTag("Fuego")){
             MorirFuego();
         }
+        if (collision.gameObject.CompareTag("LSD")){
+            MorirFuego();
+        }
         if (collision.gameObject.CompareTag("Player")){
             ContactPoint2D contact = collision.contacts[0];
             float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
