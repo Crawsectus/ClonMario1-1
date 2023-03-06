@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mario_fuego_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 600
+        width: 144
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e302299c675e8928d72eb4d723c5ff
+      internalID: -7228061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_12
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 600
+        width: 180
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ace1c65faaeffd5a6dca78733dd799
+      internalID: 1764986798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_13
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 600
+        width: 132
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b584da309d3ee2927a700d8c121934fb
+      internalID: -890718924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 600
+        width: 156
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209f5c6d828fba885ad3800ccd671636
+      internalID: 1398070847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_15
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 600
+        width: 156
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e959a999f582d4c80aa4ccf88f5f4a
+      internalID: 1084820949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 276
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452003e82dac4800f81cb8b9d15f2f56
+      internalID: 1490124864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_28
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 276
+        width: 156
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5597edb66acfa2d45bdce6888fb96ca7
+      internalID: 805521118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_fuego_29
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 288
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4215a42e70e4f98f48530660be777384
+      internalID: -2117982596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +294,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mario_fuego_0: -1072131103
+      Mario_fuego_1: 538427433
+      Mario_fuego_10: 660317705
+      Mario_fuego_11: -7228061
+      Mario_fuego_12: 1764986798
+      Mario_fuego_13: -890718924
+      Mario_fuego_14: 1398070847
+      Mario_fuego_15: 1084820949
+      Mario_fuego_16: 1277616356
+      Mario_fuego_17: 1749575444
+      Mario_fuego_18: -205913324
+      Mario_fuego_19: 1868461168
+      Mario_fuego_2: 478313796
+      Mario_fuego_20: -220027205
+      Mario_fuego_21: -138564163
+      Mario_fuego_22: 399507693
+      Mario_fuego_23: -2095093087
+      Mario_fuego_24: 1550651840
+      Mario_fuego_25: 1576155833
+      Mario_fuego_26: 1867044481
+      Mario_fuego_27: 1490124864
+      Mario_fuego_28: 805521118
+      Mario_fuego_29: -2117982596
+      Mario_fuego_3: -2105914359
+      Mario_fuego_4: 267193798
+      Mario_fuego_5: -68090393
+      Mario_fuego_6: 32255434
+      Mario_fuego_7: -445951049
+      Mario_fuego_8: -1484470443
+      Mario_fuego_9: 644461590
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

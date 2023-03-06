@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mario_estrella_3_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 600
+        width: 144
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f2d28ee50fdbcf0b6177a190bc80da
+      internalID: 1582288118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_12
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 600
+        width: 180
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268c8dc27a2f4ff3fb3a69d97036d267
+      internalID: 1655833289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_13
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 600
+        width: 132
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e2c5c9e9695a40ea2420c22b92a213
+      internalID: -464040366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 600
+        width: 156
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ee87c4670914462afbe6a54ea696a3
+      internalID: -344904547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_15
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 600
+        width: 156
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e438ae1b5277049d0805cf6f17a33b78
+      internalID: -218540870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 276
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7c643a8608457d2937cee6597b2ac6
+      internalID: -829360777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_28
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 276
+        width: 156
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b48e49f73c0a6a8b8c8517832d927ef
+      internalID: 1620586309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_estrella_3_29
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 288
+        width: 168
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6dd4937e9c6549a9aad9128cc4d8e8e
+      internalID: -1171389380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +294,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mario_estrella_3_0: -1311728399
+      Mario_estrella_3_1: 554846077
+      Mario_estrella_3_10: 659202739
+      Mario_estrella_3_11: 1582288118
+      Mario_estrella_3_12: 1655833289
+      Mario_estrella_3_13: -464040366
+      Mario_estrella_3_14: -344904547
+      Mario_estrella_3_15: -218540870
+      Mario_estrella_3_16: -1156655624
+      Mario_estrella_3_17: -2102369490
+      Mario_estrella_3_18: -2088723379
+      Mario_estrella_3_19: 1382417244
+      Mario_estrella_3_2: -1503828817
+      Mario_estrella_3_20: -1722590010
+      Mario_estrella_3_21: -1372119441
+      Mario_estrella_3_22: -1376354042
+      Mario_estrella_3_23: -826020372
+      Mario_estrella_3_24: -375017973
+      Mario_estrella_3_25: -1182692520
+      Mario_estrella_3_26: -946533885
+      Mario_estrella_3_27: -829360777
+      Mario_estrella_3_28: 1620586309
+      Mario_estrella_3_29: -1171389380
+      Mario_estrella_3_3: -1151193379
+      Mario_estrella_3_4: 164479673
+      Mario_estrella_3_5: 1644131250
+      Mario_estrella_3_6: 1060234956
+      Mario_estrella_3_7: 621051092
+      Mario_estrella_3_8: 1982717899
+      Mario_estrella_3_9: 1268874853
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public int monedas;
     public int vidas;
     private bool fuego=false;
+    private bool Diva=false;
     public GameObject bolaFuego;
     public int contador=0;
     public bool CD=false;
@@ -254,6 +255,7 @@ public class Player : MonoBehaviour
             StartCoroutine(Invencibilidad(1f,false));
         }else{
             fuego=false;
+            changeAnimator("Base Layer");
             vida--;
             StartCoroutine(Invencibilidad(0.5f,false));
         }
@@ -262,7 +264,7 @@ public class Player : MonoBehaviour
     IEnumerator Pasito(){
         //anim.SetBool("Pasito",true);
         //anim.SetBool("isWalking",false);
-        anim.SetTrigger("Pasito");
+        anim.SetBool("Pasito",true);
         Debug.Log("ANIMATEEEEEEE");
     	yield return new WaitForSeconds(0.25f);
     	anim.SetBool("Pasito",false);
@@ -279,6 +281,9 @@ public class Player : MonoBehaviour
     	    gameObject.transform.localScale *= 1.5f;
     	}else if (vida>=1){
             fuego=true;
+            if(Diva==false){
+                changeAnimator("Fuego");
+            }
     	}
     	vida++;
     }
@@ -305,6 +310,8 @@ public class Player : MonoBehaviour
         StartCoroutine(Invencibilidad(10f,true));
     }
     IEnumerator Invencibilidad(float tiempo,bool modo){
+        changeAnimator("Estrella");
+        Diva=true;
         if (modo==true){
             gameObject.tag="LSD";
             moveSpeed=moveSpeed+1.5f;
@@ -313,10 +320,24 @@ public class Player : MonoBehaviour
         }
         yield return new WaitForSeconds(tiempo); 
         gameObject.tag="Player";
+        if (fuego==true){
+            changeAnimator("Fuego");
+        }else{
+            changeAnimator("Base Layer");
+        }
+        Diva=false;
         if (modo==true){
             audioEstrella.Stop();
             audioMain.UnPause();
             moveSpeed=moveSpeed-1.5f;
+            
         }
+    }
+    public void changeAnimator(string nombreLayer){
+        for (int i =0;i<anim.layerCount;i++){
+            anim.SetLayerWeight(i,0);
+        }
+        int index=anim.GetLayerIndex(nombreLayer);
+        anim.SetLayerWeight(index,1);
     }
 }
