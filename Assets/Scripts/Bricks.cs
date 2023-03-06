@@ -22,7 +22,7 @@ public class Bricks : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")){
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
         ContactPoint2D contact = collision.contacts[0];
         float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
         if (dotProduct > 0.5f)
