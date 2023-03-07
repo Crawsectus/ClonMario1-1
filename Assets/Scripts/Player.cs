@@ -278,7 +278,8 @@ public class Player : MonoBehaviour
     {
         audioCrecer.Play();
     	if (vida<=0){
-    	    gameObject.transform.localScale *= 1.5f;
+    	    //gameObject.transform.localScale *= 1.5f;
+            transform.localScale = new Vector3(0.085f, 0.13f, 0f);
     	}else if (vida>=1){
             fuego=true;
             if(Diva==false){
