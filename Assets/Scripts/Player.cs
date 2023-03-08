@@ -18,8 +18,9 @@ public class Player : MonoBehaviour
     public bool grounded = false;
     private Camera mainCamera;
     private SpriteRenderer sr;
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
+    public float moveSpeed = 0.8f;
+    public float runSpeed = 1.2f; 
+    public float jumpForce = 3.7f;
     public int vida=0;
     private Animator anim;
     private float initialX;
@@ -85,7 +86,8 @@ public class Player : MonoBehaviour
         if (muelto == false)
         {
             float moveInput = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+            float currentSpeed = Input.GetKey(KeyCode.X) ? runSpeed : moveSpeed; // verificar si se está corriendo
+            rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
             if (!Input.anyKey){
                 anim.SetBool("isWalking",false);
                 moverRight=false;
@@ -114,7 +116,7 @@ public class Player : MonoBehaviour
                 }
             }
             //salto
-            if(Input.GetKeyDown(KeyCode.Space) && grounded == true && muelto==false)
+            if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && grounded == true && muelto==false)
             {
                 audioSalto.Play();
                 rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
@@ -139,7 +141,7 @@ public class Player : MonoBehaviour
                 mainCamera.transform.position = new Vector3(initialX, mainCamera.transform.position.y, mainCamera.transform.position.z);
             }
             if (fuego==true){
-                if(Input.GetKeyDown(KeyCode.P)){
+                if(Input.GetKeyDown(KeyCode.P)||Input.GetKeyDown(KeyCode.C)){
                     if (contador<=1 && CD==false){
                     audioFuego.Play();    
                     if (sr.flipX==false){
