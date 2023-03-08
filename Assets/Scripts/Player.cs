@@ -45,9 +45,9 @@ public class Player : MonoBehaviour
         mainCamera = Camera.main;
         sr = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
-        col = GetComponent<Collider2D>();
+        col = GetComponent<Collider2D>(); 
         // vidas
-        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0)
+        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0) 
         {
             vidas = 3;
             PlayerPrefs.SetInt("vidas", vidas);
