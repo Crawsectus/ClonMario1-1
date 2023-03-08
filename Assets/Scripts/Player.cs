@@ -45,9 +45,9 @@ public class Player : MonoBehaviour
         mainCamera = Camera.main;
         sr = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
-        col = GetComponent<Collider2D>();
+        col = GetComponent<Collider2D>(); 
         // vidas
-        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0)
+        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0) 
         {
             vidas = 3;
             PlayerPrefs.SetInt("vidas", vidas);
@@ -252,12 +252,12 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale *= 0.75f;
             fuego=false;
             vida--;
-            StartCoroutine(Invencibilidad(1f,false));
+            StartCoroutine(Invencibilidad(3f,false));
         }else{
             fuego=false;
             changeAnimator("Base Layer");
             vida--;
-            StartCoroutine(Invencibilidad(0.5f,false));
+            StartCoroutine(Invencibilidad(3f,false));
         }
         }
     }
