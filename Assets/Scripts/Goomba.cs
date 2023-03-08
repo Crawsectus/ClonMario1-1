@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goomba : MonoBehaviour
 {
-    public float speed = 1.0f;	
+    public float speed = 0.4f;	
     private bool canMove = false;
     public AudioSource audioMorir;
     private Renderer enemyRenderer;
@@ -37,10 +37,20 @@ public class Goomba : MonoBehaviour
           transform.position += new Vector3(-speed * Time.deltaTime, 0,0); 
         }
     }
+
+    void ActivarMovimiento() {
+        speed = 0.35f; // aquí puedes ajustar la velocidad que quieras que tenga el enemigo
+        anim.enabled = true; 
+        if (GetComponent<Collider2D>().enabled == false){
+            GetComponent<Collider2D>().enabled = true;
+            // volver a activar y
+            rb.constraints = RigidbodyConstraints2D.None;
+        }
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Si el objeto colisiona con otro objeto que tenga un Collider2D
-        if (collision.collider.GetComponent<Collider2D>())
+        if (collision.collider.GetComponent<Collider2D>()  && !collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Invencible"))
         {
             // Comprobar si la normal de la colisión está en la dirección horizontal
             if (Mathf.Abs(collision.contacts[0].normal.y) < 0.5f)
@@ -48,6 +58,12 @@ public class Goomba : MonoBehaviour
                 // Mover el objeto al otro lado de la pared en el eje Y (arriba y abajo)
                 speed= -speed;
             }
+        }
+        if (collision.gameObject.CompareTag("Invencible")){
+            GetComponent<Collider2D>().enabled = false;
+            // freeze y
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+            Invoke("ActivarMovimiento", 1f);
         }
         if (collision.gameObject.CompareTag("Fuego")){
             MorirFuego();
@@ -63,6 +79,9 @@ public class Goomba : MonoBehaviour
                 // El jugador ha tocado la parte superior del BoxCollider2D
                 Debug.Log("arriba");
                 collision.gameObject.GetComponent<Player>().Morir(true);
+                speed = 0f;
+                anim.enabled = false; 
+                Invoke("ActivarMovimiento", 1f);
             }
             else if (dotProduct < -0.5f)
             {
@@ -75,17 +94,25 @@ public class Goomba : MonoBehaviour
                 // El jugador ha tocado el lado derecho del BoxCollider2D
                 Debug.Log("derecha");
                 collision.gameObject.GetComponent<Player>().Morir(true);
+                speed = 0f;
+                anim.enabled = false; 
+                Invoke("ActivarMovimiento", 1f);
             }
             else if (contact.normal.x < 0 && dotProduct > -0.5f)
             {
                 // El jugador ha tocado el lado izquierdo del BoxCollider2D
                 Debug.Log("izquierda");
                 collision.gameObject.GetComponent<Player>().Morir(true);
+                speed = 0f;
+                anim.enabled = false; 
+                Invoke("ActivarMovimiento", 1f);
             }
+            
         }
     }
     public void Morir(){
         if (muelto==false){
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             rb.isKinematic = true;
             col.enabled=false;
             audioMorir.Play();

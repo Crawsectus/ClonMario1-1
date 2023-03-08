@@ -252,12 +252,12 @@ public class Player : MonoBehaviour
             gameObject.transform.localScale *= 0.75f;
             fuego=false;
             vida--;
-            StartCoroutine(Invencibilidad(1f,false));
+            StartCoroutine(Invencibilidad(3f,false));
         }else{
             fuego=false;
             changeAnimator("Base Layer");
             vida--;
-            StartCoroutine(Invencibilidad(0.5f,false));
+            StartCoroutine(Invencibilidad(3f,false));
         }
         }
     }
