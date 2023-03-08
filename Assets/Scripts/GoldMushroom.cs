@@ -35,10 +35,12 @@ public class GoldMushroom : MonoBehaviour
                 audioAparecer.Play();
                 if (tam<=0){
                     Vector3 posHongo=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
-                    GameObject hongoObject = Instantiate(hongoPrefab, posHongo, Quaternion.identity);
+                    GameObject hongoObject = Instantiate(hongoPrefab, transform.position, Quaternion.identity);
+                    StartCoroutine(Aparecer(hongoObject,posHongo,true));
                 }else{
                     Vector3 posFlor=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
                     GameObject florObject = Instantiate(florPrefab, posFlor, Quaternion.identity);
+                    StartCoroutine(Aparecer(florObject,posFlor,false));
                 }
                 flagSpawn=true;
             }
@@ -46,6 +48,20 @@ public class GoldMushroom : MonoBehaviour
             StartCoroutine(Salto());
          }
         } 
+      }
+      IEnumerator Aparecer(GameObject objeto, Vector3 maxAltura,bool tipo){
+        while (objeto.transform.position.y<=maxAltura.y){
+            objeto.transform.position+=new Vector3(0,0.01f,0); 
+            yield return new WaitForSeconds(0.05f); 
+        }
+        objeto.GetComponent<Collider2D>().enabled=true;
+        if (tipo==true){
+            objeto.GetComponent<Rigidbody2D>().isKinematic=false;
+            objeto.GetComponent<Hongo>().enabled=true;
+        }else{
+            objeto.GetComponent<Flor>().enabled=true;
+        }
+        
       }
       IEnumerator Salto(){
         if (flag==false){

@@ -13,7 +13,7 @@ public class Flor : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
-            collision.gameObject.GetComponent<Player>().Crecer();
+            collision.gameObject.GetComponent<Player>().CrecerFuego();
             Destroy(gameObject);
         }
     }

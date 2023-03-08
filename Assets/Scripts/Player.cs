@@ -277,16 +277,16 @@ public class Player : MonoBehaviour
     public void Crecer()
     {
         audioCrecer.Play();
-    	if (vida<=0){
-    	    //gameObject.transform.localScale *= 1.5f;
-            transform.localScale = new Vector3(0.085f, 0.13f, 0f);
-    	}else if (vida>=1){
-            fuego=true;
-            if(Diva==false){
-                changeAnimator("Fuego");
-            }
-    	}
-    	vida++;
+    	//gameObject.transform.localScale *= 1.5f;
+        transform.localScale = new Vector3(0.085f, 0.13f, 0f);
+        vida=1;
+    }
+    public void CrecerFuego(){
+        fuego=true;
+        if(Diva==false){
+            changeAnimator("Fuego");
+        }
+        vida=2;
     }
     public int getTam(){
        return vida;

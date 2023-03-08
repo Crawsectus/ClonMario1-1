@@ -7,6 +7,8 @@ public class Hongo : MonoBehaviour
     public float speed = 1.0f;	
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private Collider2D col; // Componente Collider2D del objeto
+    public bool tipoHongo=true;
+    private bool flag=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,13 @@ public class Hongo : MonoBehaviour
     }
         void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
-            collision.gameObject.GetComponent<Player>().Crecer();
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible") && flag==false){
+            flag=true;
+            if (tipoHongo==true){
+                collision.gameObject.GetComponent<Player>().Crecer();
+            }else{
+                collision.gameObject.GetComponent<Player>().AumentarVidas();
+            }
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Ground"))
