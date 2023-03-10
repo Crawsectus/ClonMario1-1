@@ -41,7 +41,7 @@ public class goldEstrella : MonoBehaviour
             StartCoroutine(Salto());
          }
         } 
-      }
+      
       IEnumerator Aparecer(GameObject objeto, Vector3 maxAltura){
         while (objeto.transform.position.y<=maxAltura.y){
             objeto.transform.position+=new Vector3(0,0.01f,0); 
