@@ -41,19 +41,22 @@ public class Gold : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
         ContactPoint2D contact = collision.contacts[0];
         float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
+        GameObject jugador=collision.gameObject;
         if (dotProduct > 0.5f)
-         {
-            StartCoroutine(Salto());
+         {  
+            StartCoroutine(Salto(jugador));
          }
+          
         } 
       }
-      IEnumerator Salto(){
+      IEnumerator Salto(GameObject jugador){
         if (flag==false){
             if (contador<=0){
                 flag=true;
                 anim.SetBool("isDead",true);
             }
-            Debug.Log("sonido:");
+            Debug.Log("Aumentaran las monedas!");
+            jugador.GetComponent<Player>().AumentarMonedas();
             audioGold.Play();
             monedas++;
             PlayerPrefs.SetInt("monedas", monedas);

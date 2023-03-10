@@ -358,4 +358,9 @@ public class Player : MonoBehaviour
         int index=anim.GetLayerIndex(nombreLayer);
         anim.SetLayerWeight(index,1);
     }
+    public void AumentarMonedas(){
+        monedas++;
+        PlayerPrefs.SetInt("monedas", monedas);
+        Debug.Log(monedas);
+    }
 }
