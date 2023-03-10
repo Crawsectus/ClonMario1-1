@@ -10,27 +10,43 @@ public class bolaFuego : MonoBehaviour
     float dampingFactor = 0.1f;
     public AudioSource audioDestruir;
     private bool dir=true;
+    public bool movy=false;
     // Start is called before the first frame update
     void Start()
     {
-      rb = GetComponent<Rigidbody2D>(); // Obtener el componente Rigidbody2D del objeto
       col = GetComponent<Collider2D>(); // Obtener el componente Collider2D del objeto   
+      rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
       if(dir==true){
-        transform.position += new Vector3(speed * Time.deltaTime, 0,0);  
+        if (movy==true){
+          transform.position += new Vector3(speed * Time.deltaTime, speed*Time.deltaTime,0);  
+        }else{
+          transform.position += new Vector3(speed * Time.deltaTime, -speed*Time.deltaTime,0);  
+        }
       }else{
-        transform.position += new Vector3(-speed * Time.deltaTime, 0,0);  
+        if (movy==true){
+          transform.position += new Vector3(-speed * Time.deltaTime, speed*Time.deltaTime,0);  
+        }else{
+          transform.position += new Vector3(-speed * Time.deltaTime, -speed*Time.deltaTime,0);  
+        } 
       }  
     }
     public void Mover(bool direc){
       dir=direc;
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+          Debug.Log("Eche pa arriba");
+          movy=true;
+          StartCoroutine(rebote());
+        }
         int collidedLayer = collision.gameObject.layer;
         if (LayerMask.LayerToName(collidedLayer)=="Terrain"){
           audioDestruir.Play();
@@ -46,5 +62,9 @@ public class bolaFuego : MonoBehaviour
       if (collision.CompareTag("Rango")){
         Destroy(gameObject);
       }
+    }
+    IEnumerator rebote(){
+      yield return new WaitForSeconds(0.1f);
+      movy=false;
     }
 }
