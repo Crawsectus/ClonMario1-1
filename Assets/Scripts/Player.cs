@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     private SpriteRenderer sr;
     public float moveSpeed = 0.8f;
     public float runSpeed = 1.2f; 
-    public float jumpForce = 3.7f;
     public int vida=0;
     private Animator anim;
     private float initialX;
@@ -35,7 +34,11 @@ public class Player : MonoBehaviour
     public GameObject bolaFuego;
     public int contador=0;
     public bool CD=false;
-   //holaaaaaaa xcompileeee
+    [SerializeField] private float JumpForce = 2f; 
+    private bool isJumping = false; // Indica si está en el aire
+
+
+
 	
 
 
@@ -68,7 +71,7 @@ public class Player : MonoBehaviour
             puntos = PlayerPrefs.GetInt("puntos");
         }
         // Monedas
-        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 19)
+        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 30)
         {
             monedas = 0;
             PlayerPrefs.SetInt("monedas", monedas);
@@ -115,7 +118,7 @@ public class Player : MonoBehaviour
                 StartCoroutine(Pasito());
                 }
             }
-            //salto
+            /*salto
             if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && grounded == true && muelto==false)
             {
                 audioSalto.Play();
@@ -125,7 +128,19 @@ public class Player : MonoBehaviour
             if(salto==true){
                 anim.SetBool("isWalking",false);
                 anim.SetBool("isJumping",true);
+            }*/
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z))
+            {
+                audioSalto.Play();
+                rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+                isJumping = true;
+            }    
+
+            if(isJumping){
+                anim.SetBool("isWalking",false);
+                anim.SetBool("isJumping",true);
             }
+        
             // Hacer que la cámara siga al jugador en el eje X
             //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
 
@@ -240,7 +255,7 @@ public class Player : MonoBehaviour
             audioMuerte.Play();
             anim.SetBool("isDead",true);
             GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation);
-            rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up*JumpForce,ForceMode2D.Impulse);
             muelto=true;
             vidas--;
             PlayerPrefs.SetInt("vidas", vidas);
