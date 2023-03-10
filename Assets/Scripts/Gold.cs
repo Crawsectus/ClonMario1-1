@@ -19,16 +19,6 @@ public class Gold : MonoBehaviour
     {
         col = GetComponent<Collider2D>(); // Obtener el componente Collider2D del objeto
         anim= GetComponent<Animator>();
-        // Monedas
-        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 30)
-        {
-            monedas = 0;
-            PlayerPrefs.SetInt("monedas", monedas);
-        }
-        else
-        {
-            monedas = PlayerPrefs.GetInt("monedas");
-        }
     }
 
     // Update is called once per frame
@@ -58,9 +48,6 @@ public class Gold : MonoBehaviour
             Debug.Log("Aumentaran las monedas!");
             jugador.GetComponent<Player>().AumentarMonedas();
             audioGold.Play();
-            monedas++;
-            PlayerPrefs.SetInt("monedas", monedas);
-            Debug.Log("Monedas: " + monedas);
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
             GameObject monedaObject = Instantiate(monedaPrefab, transform.position, Quaternion.identity);
             monedaObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadMoneda);

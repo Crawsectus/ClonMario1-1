@@ -4497,6 +4497,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &345130264
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8348,9 +8350,9 @@ GameObject:
   m_Component:
   - component: {fileID: 675690416}
   - component: {fileID: 675690415}
-  - component: {fileID: 675690413}
   - component: {fileID: 675690412}
   - component: {fileID: 675690417}
+  - component: {fileID: 675690418}
   m_Layer: 8
   m_Name: Invisible
   m_TagString: Ground
@@ -8378,21 +8380,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &675690413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675690411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641d09a60c717f5a0a60f681b5f50a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hongoPrefab: {fileID: 1972112416}
-  florPrefab: {fileID: 1972112416}
-  audioAparecer: {fileID: 1403230737}
 --- !u!212 &675690415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8470,12 +8457,26 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.16, y: 0.16}
   m_Direction: 0
+--- !u!114 &675690418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675690411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefee3cd2dae3db409e0cff7eb9bf5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hongoPrefab: {fileID: 1972112416}
+  audioAparecer: {fileID: 1403230737}
 --- !u!1 &677823003
 GameObject:
   m_ObjectHideFlags: 0
@@ -9071,6 +9072,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &723838783
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9294,6 +9297,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &756587936
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11159,6 +11164,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &897165925
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11827,6 +11834,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &987358078
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11966,6 +11975,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &993778912
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14082,6 +14093,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &1210075637
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14400,7 +14413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.36, y: 0.63, z: 0}
+  m_LocalPosition: {x: -6.72, y: 0.5, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14428,10 +14441,8 @@ MonoBehaviour:
   audioVida: {fileID: 328425467}
   audioFuego: {fileID: 418243418}
   audioEstrella: {fileID: 445966370}
-  grounded: 0
   moveSpeed: 0.8
   runSpeed: 1.5
-  jumpForce: 3.7
   vida: 0
   salto: 0
   moverLeft: 0
@@ -14443,6 +14454,10 @@ MonoBehaviour:
   bolaFuego: {fileID: 419480857}
   contador: 0
   CD: 0
+  grounded: 0
+  saltar: 0
+  jumpForce: 3.7
+  MultiplicadorCancelarSalto: 0
 --- !u!95 &1223253672
 Animator:
   serializedVersion: 5
@@ -15860,6 +15875,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &1305699253
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -18652,6 +18669,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &1475636906
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -21019,6 +21038,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 7
+  monedas: 0
+  cosa: 0
 --- !u!70 &1665724058
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -23037,6 +23058,8 @@ MonoBehaviour:
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
   contador: 0
+  monedas: 0
+  cosa: 0
 --- !u!70 &1816207773
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

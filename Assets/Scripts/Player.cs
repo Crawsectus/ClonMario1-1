@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     public AudioSource audioVida;
     public AudioSource audioFuego; 
     public AudioSource audioEstrella;
-    public bool grounded = false;
     private Camera mainCamera;
     private SpriteRenderer sr;
     public float moveSpeed = 0.8f;
@@ -34,8 +33,12 @@ public class Player : MonoBehaviour
     public GameObject bolaFuego;
     public int contador=0;
     public bool CD=false;
-    [SerializeField] private float JumpForce = 2f; 
-    private bool isJumping = false; // Indica si está en el aire
+    public bool grounded = false;
+    public bool saltar = false;
+    [Header("Salto regulable")]
+    [SerializeField] private float jumpForce;
+    [Range(0, 1)] [SerializeField] private float MultiplicadorCancelarSalto;
+    private bool botonSaltoArriba = true;
 
 
 
@@ -118,28 +121,20 @@ public class Player : MonoBehaviour
                 StartCoroutine(Pasito());
                 }
             }
-            /*salto
-            if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && grounded == true && muelto==false)
+            // salto:
+            if (Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Z))
             {
-                audioSalto.Play();
-                rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
-                salto=true;
+                saltar = true;
             }
-            if(salto==true){
-                anim.SetBool("isWalking",false);
-                anim.SetBool("isJumping",true);
-            }*/
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyUp(KeyCode.Space)||Input.GetKeyUp(KeyCode.Z))
             {
-                audioSalto.Play();
-                rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-                isJumping = true;
-            }    
-
-            if(isJumping){
-                anim.SetBool("isWalking",false);
-                anim.SetBool("isJumping",true);
+                BotonSaltoArriba();
             }
+            if (saltar && grounded && botonSaltoArriba)
+            {
+                Saltar();
+            }
+            saltar = false;
         
             // Hacer que la cámara siga al jugador en el eje X
             //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
@@ -178,6 +173,23 @@ public class Player : MonoBehaviour
             }
         }
         
+    }
+
+    private void Saltar()
+    {
+        audioSalto.Play();
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        grounded = false;
+        botonSaltoArriba = false;
+        saltar = false;
+        
+    }
+    private void BotonSaltoArriba(){
+        if(rb.velocity.y>0){
+            rb.AddForce(Vector2.down * rb.velocity.y * (1-MultiplicadorCancelarSalto), ForceMode2D.Impulse);
+        }
+        botonSaltoArriba = true;
+        saltar = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -255,7 +267,7 @@ public class Player : MonoBehaviour
             audioMuerte.Play();
             anim.SetBool("isDead",true);
             GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation);
-            rb.AddForce(Vector2.up*JumpForce,ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
             muelto=true;
             vidas--;
             PlayerPrefs.SetInt("vidas", vidas);
