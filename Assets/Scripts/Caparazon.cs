@@ -43,11 +43,12 @@ public class Caparazon : MonoBehaviour
             {
                 // El jugador ha tocado la parte inferior del BoxCollider2D
                 Debug.Log("abajo");
-                if (canMove==false){
+                canMove=true;
+                /*if (canMove==false){
                     canMove=true;
                 }else{
                    canMove=false; 
-                }
+                }*/
             }else if (contact.normal.x > 0)
             {
                 // El jugador ha tocado el lado derecho del BoxCollider2D

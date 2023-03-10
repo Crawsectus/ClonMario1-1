@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 35953101}
   - component: {fileID: 35953100}
   - component: {fileID: 35953102}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 47749977}
   - component: {fileID: 47749976}
   - component: {fileID: 47749978}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (26)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1205,7 +1205,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 52558191}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2374,7 +2374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160894733}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2439,7 +2439,7 @@ GameObject:
   - component: {fileID: 198886881}
   - component: {fileID: 198886880}
   - component: {fileID: 198886882}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (22)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2881,7 +2881,7 @@ GameObject:
   - component: {fileID: 232427766}
   - component: {fileID: 232427765}
   - component: {fileID: 232427767}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3017,7 +3017,7 @@ GameObject:
   - component: {fileID: 233706298}
   - component: {fileID: 233706297}
   - component: {fileID: 233706299}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (12)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3181,7 +3181,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 243226117}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3371,7 +3371,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 253070495}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 258390501}
   - component: {fileID: 258390500}
   - component: {fileID: 258390502}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (24)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3765,7 +3765,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 291944466}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3823,7 +3823,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 295002707}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4547,7 +4547,7 @@ GameObject:
   - component: {fileID: 345130263}
   - component: {fileID: 345130262}
   - component: {fileID: 345130264}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4996,7 +4996,7 @@ GameObject:
   - component: {fileID: 384306004}
   - component: {fileID: 384306003}
   - component: {fileID: 384306005}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5216,7 +5216,7 @@ GameObject:
   - component: {fileID: 389828556}
   - component: {fileID: 389828555}
   - component: {fileID: 389828557}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (20)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6000,10 +6000,10 @@ GameObject:
   m_Component:
   - component: {fileID: 419480860}
   - component: {fileID: 419480859}
-  - component: {fileID: 419480863}
   - component: {fileID: 419480858}
   - component: {fileID: 419480862}
-  - component: {fileID: 419480861}
+  - component: {fileID: 419480864}
+  - component: {fileID: 419480863}
   m_Layer: 11
   m_Name: bolaFuego
   m_TagString: Fuego
@@ -6091,34 +6091,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419480857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.23, y: 0.78, z: -0.0143845575}
+  m_LocalPosition: {x: -5.767, y: 1.439, z: -0.0143845575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1133488891}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &419480861
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419480857}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 1
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 91b82d5e788f2f1518e7c9aa008a47be, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &419480862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6159,6 +6138,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   audioDestruir: {fileID: 626508192}
+  movy: 0
+--- !u!50 &419480864
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419480857}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &445966368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,7 +6714,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 470607700}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7085,7 +7086,7 @@ GameObject:
   - component: {fileID: 494186424}
   - component: {fileID: 494186426}
   - component: {fileID: 494186427}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -7597,7 +7598,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 555131584}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7787,7 +7788,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 557350122}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8337,7 +8338,7 @@ GameObject:
   - component: {fileID: 665893045}
   - component: {fileID: 665893044}
   - component: {fileID: 665893046}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (17)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8557,7 +8558,7 @@ GameObject:
   - component: {fileID: 675690413}
   - component: {fileID: 675690412}
   - component: {fileID: 675690417}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Invisible
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8863,7 +8864,7 @@ GameObject:
   - component: {fileID: 700631988}
   - component: {fileID: 700631987}
   - component: {fileID: 700631989}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9167,7 +9168,7 @@ GameObject:
   - component: {fileID: 723838782}
   - component: {fileID: 723838781}
   - component: {fileID: 723838783}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9390,7 +9391,7 @@ GameObject:
   - component: {fileID: 756587935}
   - component: {fileID: 756587934}
   - component: {fileID: 756587936}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9613,7 +9614,7 @@ GameObject:
   - component: {fileID: 766462512}
   - component: {fileID: 766462511}
   - component: {fileID: 766462513}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (21)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9749,7 +9750,7 @@ GameObject:
   - component: {fileID: 766549722}
   - component: {fileID: 766549721}
   - component: {fileID: 766549723}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (19)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -10132,7 +10133,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 783665520}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -10517,7 +10518,7 @@ GameObject:
   - component: {fileID: 832584475}
   - component: {fileID: 832584474}
   - component: {fileID: 832584476}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (11)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -10654,7 +10655,7 @@ GameObject:
   - component: {fileID: 832970632}
   - component: {fileID: 832970633}
   - component: {fileID: 832970634}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -11255,7 +11256,7 @@ GameObject:
   - component: {fileID: 897165924}
   - component: {fileID: 897165923}
   - component: {fileID: 897165925}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -11480,7 +11481,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 908134701}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11925,7 +11926,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 977668235}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12039,7 +12040,7 @@ GameObject:
   - component: {fileID: 987358077}
   - component: {fileID: 987358076}
   - component: {fileID: 987358078}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12178,7 +12179,7 @@ GameObject:
   - component: {fileID: 993778911}
   - component: {fileID: 993778910}
   - component: {fileID: 993778912}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12429,7 +12430,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1005100977}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12727,7 +12728,7 @@ GameObject:
   - component: {fileID: 1023718009}
   - component: {fileID: 1023718008}
   - component: {fileID: 1023718010}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13394,7 +13395,7 @@ GameObject:
   - component: {fileID: 1100987181}
   - component: {fileID: 1100987180}
   - component: {fileID: 1100987182}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (14)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14352,7 +14353,7 @@ GameObject:
   - component: {fileID: 1210075635}
   - component: {fileID: 1210075636}
   - component: {fileID: 1210075637}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14575,7 +14576,7 @@ GameObject:
   - component: {fileID: 1216206294}
   - component: {fileID: 1216206293}
   - component: {fileID: 1216206295}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (25)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14780,7 +14781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.36, y: 0.63, z: 0}
+  m_LocalPosition: {x: -16.371, y: 0.409, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15218,7 +15219,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1229656738}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -15577,7 +15578,7 @@ GameObject:
   - component: {fileID: 1267759103}
   - component: {fileID: 1267759102}
   - component: {fileID: 1267759104}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -15920,7 +15921,7 @@ GameObject:
   - component: {fileID: 1302263045}
   - component: {fileID: 1302263044}
   - component: {fileID: 1302263046}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (23)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16188,7 +16189,7 @@ GameObject:
   - component: {fileID: 1305699252}
   - component: {fileID: 1305699251}
   - component: {fileID: 1305699253}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16411,7 +16412,7 @@ GameObject:
   - component: {fileID: 1317812971}
   - component: {fileID: 1317812970}
   - component: {fileID: 1317812972}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16549,7 +16550,7 @@ GameObject:
   - component: {fileID: 1319904587}
   - component: {fileID: 1319904588}
   - component: {fileID: 1319904589}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17581,7 +17582,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1384597804}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -17611,7 +17612,7 @@ GameObject:
   - component: {fileID: 1384614395}
   - component: {fileID: 1384614394}
   - component: {fileID: 1384614396}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (16)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -18738,7 +18739,7 @@ GameObject:
   - component: {fileID: 1422397982}
   - component: {fileID: 1422397981}
   - component: {fileID: 1422397983}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -18902,7 +18903,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1427018216}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -19016,7 +19017,7 @@ GameObject:
   - component: {fileID: 1475636905}
   - component: {fileID: 1475636904}
   - component: {fileID: 1475636906}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -19325,7 +19326,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1498973392}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20295,7 +20296,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1547190154}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -21283,7 +21284,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1626043245}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -21437,7 +21438,7 @@ GameObject:
   - component: {fileID: 1665724056}
   - component: {fileID: 1665724057}
   - component: {fileID: 1665724058}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (13)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21929,7 +21930,7 @@ GameObject:
   - component: {fileID: 1677785890}
   - component: {fileID: 1677785889}
   - component: {fileID: 1677785891}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -23094,7 +23095,7 @@ GameObject:
   - component: {fileID: 1733558539}
   - component: {fileID: 1733558540}
   - component: {fileID: 1733558541}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -23406,7 +23407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808084988}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Golds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23455,7 +23456,7 @@ GameObject:
   - component: {fileID: 1816207772}
   - component: {fileID: 1816207771}
   - component: {fileID: 1816207773}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: gold_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -23762,7 +23763,7 @@ GameObject:
   - component: {fileID: 1843153237}
   - component: {fileID: 1843153236}
   - component: {fileID: 1843153238}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -24080,7 +24081,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1879268279}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -24194,7 +24195,7 @@ GameObject:
   - component: {fileID: 1889094303}
   - component: {fileID: 1889094302}
   - component: {fileID: 1889094304}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (18)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -24509,7 +24510,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1943042595}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -24567,7 +24568,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1960247730}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -24597,7 +24598,7 @@ GameObject:
   - component: {fileID: 1968423585}
   - component: {fileID: 1968423584}
   - component: {fileID: 1968423586}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25113,7 +25114,7 @@ GameObject:
   - component: {fileID: 1993922985}
   - component: {fileID: 1993922984}
   - component: {fileID: 1993922986}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26036,7 +26037,7 @@ GameObject:
   - component: {fileID: 2042726635}
   - component: {fileID: 2042726634}
   - component: {fileID: 2042726636}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: brick_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26200,7 +26201,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2044213187}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -26311,10 +26312,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2070475590}
   - component: {fileID: 2070475591}
-  - component: {fileID: 2070475595}
   - component: {fileID: 2070475594}
   - component: {fileID: 2070475596}
-  m_Layer: 8
+  - component: {fileID: 2070475597}
+  m_Layer: 10
   m_Name: brick_0 (15)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26408,21 +26409,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &2070475595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070475589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641d09a60c717f5a0a60f681b5f50a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hongoPrefab: {fileID: 2080872634}
-  florPrefab: {fileID: 2080872634}
-  audioAparecer: {fileID: 1403230737}
 --- !u!70 &2070475596
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26439,6 +26425,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.16, y: 0.16}
   m_Direction: 0
+--- !u!114 &2070475597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070475589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb388472a88081a3aa6e9bbe5204836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hongoPrefab: {fileID: 2080872634}
+  florPrefab: {fileID: 2080872634}
+  audioAparecer: {fileID: 1403230737}
 --- !u!1 &2071396491
 GameObject:
   m_ObjectHideFlags: 0
@@ -26662,7 +26663,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080872634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -26689,7 +26690,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080872634}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -26796,7 +26797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080872634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f994150dd4b1c2064b0eb7de802555ac, type: 3}
   m_Name: 
@@ -27227,7 +27228,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2132326188}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc30a2c581cbc07e3b3fa32d84f02a8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
