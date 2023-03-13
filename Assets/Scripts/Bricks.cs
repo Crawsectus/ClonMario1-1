@@ -33,6 +33,7 @@ public class Bricks : MonoBehaviour
            }else{
               audioDestruir.Play();
               StartCoroutine(Destruir());
+              collision.gameObject.GetComponent<Player>().AumentarPuntos(50);
            }
          }
         } 

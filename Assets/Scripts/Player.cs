@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
         anim= GetComponent<Animator>();
         col = GetComponent<Collider2D>(); 
         // vidas
-        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0) 
+        if (!PlayerPrefs.HasKey("vidas") || PlayerPrefs.GetInt("vidas") <= 0 || PlayerPrefs.GetInt("vidas") >= 5) 
         {
             vidas = 3;
             PlayerPrefs.SetInt("vidas", vidas);
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             puntos = PlayerPrefs.GetInt("puntos");
         }
         // Monedas
-        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 30)
+        if (!PlayerPrefs.HasKey("monedas") || PlayerPrefs.GetInt("monedas") >= 40)
         {
             monedas = 0;
             PlayerPrefs.SetInt("monedas", monedas);
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
     {
         if (muelto == false)
         {
-            float moveInput = Input.GetAxisRaw("Horizontal");
+            float moveInput = Input.GetAxis("Horizontal");
             float currentSpeed = Input.GetKey(KeyCode.X) ? runSpeed : moveSpeed; // verificar si se está corriendo
             rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
             if (!Input.anyKey){
@@ -107,8 +107,8 @@ public class Player : MonoBehaviour
                 sr.flipX = false;
                 moverRight=true;
                 if (moverLeft==true){
-                Debug.Log("Debería reproducirse el pasito");
-                StartCoroutine(Pasito());
+                    Debug.Log("Debería reproducirse el pasito");
+                    StartCoroutine(Pasito());
                 }              
             }
             else if (moveInput < 0 && muelto==false)
@@ -359,7 +359,7 @@ public class Player : MonoBehaviour
         if (modo==true){
             audioEstrella.Stop();
             audioMain.UnPause();
-            moveSpeed=moveSpeed-1.5f;
+            moveSpeed=moveSpeed-1.5f;  
             
         }
     }
@@ -373,6 +373,12 @@ public class Player : MonoBehaviour
     public void AumentarMonedas(){
         monedas++;
         PlayerPrefs.SetInt("monedas", monedas);
+        AumentarPuntos(200);
         Debug.Log(monedas);
+    }
+    public void AumentarPuntos(int puntos){
+        this.puntos += puntos;
+        PlayerPrefs.SetInt("puntos", this.puntos);
+        Debug.Log(this.puntos);
     }
 }

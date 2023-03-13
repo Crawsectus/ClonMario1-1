@@ -58,9 +58,11 @@ public class Koopa : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Fuego")){
             MorirFuego();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(200);
         }
         if (collision.gameObject.CompareTag("LSD")){
             MorirFuego();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(200);
         }
         if (collision.gameObject.CompareTag("Player")){
             ContactPoint2D contact = collision.contacts[0];
@@ -80,6 +82,7 @@ public class Koopa : MonoBehaviour
                     transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
                     GameObject caparazonObject = Instantiate(caparazon, transform.position, Quaternion.identity);
                     flag=true;
+                    collision.gameObject.GetComponent<Player>().AumentarPuntos(500);
                 }
                 Destroy(gameObject);
             }

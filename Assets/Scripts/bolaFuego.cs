@@ -7,7 +7,7 @@ public class bolaFuego : MonoBehaviour
     public float speed = 2.0f;	
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private Collider2D col; // Componente Collider2D del objeto
-    float dampingFactor = 0.1f;
+    //float dampingFactor = 0.1f;
     public AudioSource audioDestruir;
     private bool dir=true;
     public bool movy=false;
@@ -67,4 +67,6 @@ public class bolaFuego : MonoBehaviour
       yield return new WaitForSeconds(0.1f);
       movy=false;
     }
+
+    
 }

@@ -27,8 +27,8 @@ public class goldEstrella : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
         ContactPoint2D contact = collision.contacts[0];
         float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
-        if (dotProduct > 0.5f)
-         {
+        if (dotProduct > 0f)
+        {
             if (flagSpawn==false){
                 audioAparecer.Play();
                     Vector3 posEstrella=new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
@@ -36,11 +36,10 @@ public class goldEstrella : MonoBehaviour
                     StartCoroutine(Aparecer(estrellaObject,posEstrella));
                 }
                 flagSpawn=true;
+                StartCoroutine(Salto());
             }
-            
-            StartCoroutine(Salto());
-         }
-        } 
+        }
+    } 
       
       IEnumerator Aparecer(GameObject objeto, Vector3 maxAltura){
         while (objeto.transform.position.y<=maxAltura.y){

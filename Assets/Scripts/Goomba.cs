@@ -6,6 +6,7 @@ public class Goomba : MonoBehaviour
 {
     public float speed = 0.4f;	
     private bool canMove = false;
+    public PuntosFlotantes prefabPuntosFlotantes;
     public AudioSource audioMorir;
     private Renderer enemyRenderer;
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
@@ -87,7 +88,15 @@ public class Goomba : MonoBehaviour
             {
                 // El jugador ha tocado la parte inferior del BoxCollider2D
                 Debug.Log("abajo");
+                if (muelto==false){
+                    int puntosObtenidos = 100;
+                    // Crea el objeto de texto flotante y lo muestra encima del enemigo
+                    PuntosFlotantes puntosFlotantes = Instantiate(prefabPuntosFlotantes, transform.position, Quaternion.identity);
+                    puntosFlotantes.MostrarPuntos(puntosObtenidos);
+                    collision.gameObject.GetComponent<Player>().AumentarPuntos(puntosObtenidos);
+                }
                 Morir();
+                
             }
             else if (contact.normal.x > 0 && dotProduct > -0.5f)
             {
@@ -112,13 +121,17 @@ public class Goomba : MonoBehaviour
     }
     public void Morir(){
         if (muelto==false){
+            muelto=true;
+            //desactivar el collider
+            gameObject.layer = LayerMask.NameToLayer("Muerto");
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             rb.isKinematic = true;
             col.enabled=false;
             audioMorir.Play();
     	    StartCoroutine(MorirAhoraSi());
     	    anim.SetBool("Muelto",true);
-    	    muelto=true;
+    	    
+            
         }
     }
     public void MorirFuego(){

@@ -6,6 +6,7 @@ using TMPro;
 public class hud_game : MonoBehaviour
 {
     public TextMeshProUGUI monedas;
+    public TextMeshProUGUI puntos;
 
     // Start is called before the first frame update
     void Start()
@@ -18,5 +19,8 @@ public class hud_game : MonoBehaviour
     {
         int cantidadMonedas = PlayerPrefs.GetInt("monedas");
         monedas.text = cantidadMonedas.ToString();
+        int cantidadPuntos = PlayerPrefs.GetInt("puntos");
+        string puntosFormateados = cantidadPuntos.ToString("D6");
+        puntos.text = puntosFormateados;
     }
 }

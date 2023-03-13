@@ -512,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 3}
+  m_AnchoredPosition: {x: 9.67, y: 13.8}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727220662
@@ -562,8 +562,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
-  m_fontSizeBase: 19
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: {fileID: 727220662}
   monedas: {fileID: 1542099488}
+  puntos: {fileID: 1136595009}
 --- !u!4 &923357844
 Transform:
   m_ObjectHideFlags: 0
@@ -693,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72, y: 85}
-  m_SizeDelta: {x: 141.1833, y: 21.2522}
+  m_AnchoredPosition: {x: -168.7, y: 194.9}
+  m_SizeDelta: {x: 308.4282, y: 58.2532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136595009
 MonoBehaviour:
@@ -743,8 +744,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
-  m_fontSizeBase: 19
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -828,8 +829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.6316, y: 86.4}
-  m_SizeDelta: {x: 40.1421, y: 25}
+  m_AnchoredPosition: {x: -27.97969, y: 200.1}
+  m_SizeDelta: {x: 115.3647, y: 53.8609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1542099488
 MonoBehaviour:
@@ -878,8 +879,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
-  m_fontSizeBase: 19
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
