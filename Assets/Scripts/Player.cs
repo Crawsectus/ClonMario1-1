@@ -15,13 +15,14 @@ public class Player : MonoBehaviour
     public AudioSource audioVida;
     public AudioSource audioFuego; 
     public AudioSource audioEstrella;
+    public AudioSource audioVictoria;
     private Camera mainCamera;
     private SpriteRenderer sr;
     public float moveSpeed = 0.8f;
     public float runSpeed = 1.2f; 
     public int vida=0;
     private Animator anim;
-    private float initialX;
+    private float initialX;     
     public bool salto=false;
     private Collider2D col;
     public bool moverLeft,moverRight,muelto=false;
@@ -96,6 +97,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
             if (!Input.anyKey){
                 anim.SetBool("isWalking",false);
+                anim.SetBool("isCrouching",false);
                 moverRight=false;
                 moverLeft=false;
                 //anim.SetBool("isJumping",false);
@@ -104,6 +106,7 @@ public class Player : MonoBehaviour
             if (moveInput > 0 && muelto==false)
             {
                 anim.SetBool("isWalking",true);
+                anim.SetBool("isCrouching",false);
                 sr.flipX = false;
                 moverRight=true;
                 if (moverLeft==true){
@@ -114,6 +117,7 @@ public class Player : MonoBehaviour
             else if (moveInput < 0 && muelto==false)
             {
                 anim.SetBool("isWalking",true);
+                anim.SetBool("isCrouching",false);
                 sr.flipX = true;
                 moverLeft=true;
                 if (moverRight==true){
@@ -135,7 +139,16 @@ public class Player : MonoBehaviour
                 Saltar();
             }
             saltar = false;
-        
+            if (Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S) && vida>0 && moverRight==false && moverLeft==false){
+                anim.SetBool("isCrouching",true);
+                col.offset=new Vector2(0, 0.2f);
+                //col.size=new Vector2(1.4f, 1f);
+            }
+            if (Input.GetKeyUp(KeyCode.DownArrow)||Input.GetKeyUp(KeyCode.S)){
+                anim.SetBool("isCrouching",false);
+                col.offset=new Vector2(0, 0f);
+                //col.size=new Vector2(1.4f, 1.92f);
+            }
             // Hacer que la cámara siga al jugador en el eje X
             //mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
 
@@ -206,8 +219,7 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Subida")){
                 audioTubo.Play();
-                transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
-                mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
+                StartCoroutine(animSubir());
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -303,17 +315,33 @@ public class Player : MonoBehaviour
       yield return new WaitForSeconds(0.2f);  
       CD=false;
     }
+    IEnumerator CrecerAnim(){
+        grounded=true;
+        transform.localScale = new Vector3(0.085f, 0.10f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        grounded=true;
+        transform.localScale = new Vector3(0.085f, 0.08f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        grounded=true;
+        transform.localScale = new Vector3(0.085f, 0.10f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        grounded=true;
+        transform.localScale = new Vector3(0.085f, 0.13f, 0f);
+        muelto=false;
+    }
     public void Crecer()
     {
         audioCrecer.Play();
     	//gameObject.transform.localScale *= 1.5f;
-        transform.localScale = new Vector3(0.085f, 0.13f, 0f);
+        muelto=true;
+        StartCoroutine(CrecerAnim());
         vida=1;
     }
     public void CrecerFuego(){
         fuego=true;
         if(Diva==false){
-            changeAnimator("Fuego");
+            muelto=true;
+            StartCoroutine(Invencibilidad(0.2f,false));
         }
         vida=2;
     }
@@ -329,8 +357,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Bajada")){
             if(Input.GetKeyDown(KeyCode.S)){
                 audioTubo.Play();
-                transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
-                mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
+                StartCoroutine(animBajar());
             }
         }
     }
@@ -355,6 +382,7 @@ public class Player : MonoBehaviour
         }else{
             changeAnimator("Base Layer");
         }
+        muelto=false;
         Diva=false;
         if (modo==true){
             audioEstrella.Stop();
@@ -374,5 +402,47 @@ public class Player : MonoBehaviour
         monedas++;
         PlayerPrefs.SetInt("monedas", monedas);
         Debug.Log(monedas);
+    }
+    IEnumerator animGanar(){
+        audioMain.Stop();
+        audioVictoria.Play();
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+        yield return new WaitForSeconds(1.2f); 
+        transform.position+=new Vector3(0.08f,0,0);
+        transform.rotation=Quaternion.Euler(0, 180, 0);
+        yield return new WaitForSeconds(0.8f); 
+        rb.constraints = RigidbodyConstraints2D.None;
+        transform.rotation=Quaternion.Euler(0, 0, 0);
+    }
+    public void Ganar(){
+        StartCoroutine(animGanar());
+    }
+    IEnumerator animBajar(){
+        rb.isKinematic=true;
+        col.enabled=false;
+        transform.position+=new Vector3(0,-0.04f,0);
+        yield return new WaitForSeconds(0.2f); 
+        transform.position+=new Vector3(0,-0.04f,0);
+        yield return new WaitForSeconds(0.2f); 
+        transform.position+=new Vector3(0,-0.04f,0);
+        yield return new WaitForSeconds(0.2f); 
+        rb.isKinematic=false;
+        col.enabled=true;
+        transform.position = new Vector3(-8.82f, -0.4f, transform.position.z);
+        mainCamera.transform.position = new Vector3(transform.position.x, -1.2f, mainCamera.transform.position.z);
+    }
+    IEnumerator animSubir(){
+        rb.isKinematic=true;
+        col.enabled=false;
+        transform.position+=new Vector3(0.04f,0,0);
+        yield return new WaitForSeconds(0.2f); 
+        transform.position+=new Vector3(0.04f,0,0);
+        yield return new WaitForSeconds(0.2f); 
+        transform.position+=new Vector3(0.04f,0,0);
+        yield return new WaitForSeconds(0.2f); 
+        rb.isKinematic=false;
+        col.enabled=true;
+        transform.position = new Vector3(9.37f, 0.733f, transform.position.z);
+        mainCamera.transform.position = new Vector3(transform.position.x, 1.24f, mainCamera.transform.position.z);
     }
 }
