@@ -9,6 +9,8 @@ public class Hongo : MonoBehaviour
     private Collider2D col; // Componente Collider2D del objeto
     public bool tipoHongo=true;
     private bool flag=false;
+
+    public bool isVida;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,9 @@ public class Hongo : MonoBehaviour
                 collision.gameObject.GetComponent<Player>().Crecer();
             }else{
                 collision.gameObject.GetComponent<Player>().AumentarVidas();
+            }
+            if (!isVida){
+                collision.gameObject.GetComponent<Player>().AumentarPuntos(1000);
             }
             Destroy(gameObject);
         }

@@ -421,6 +421,19 @@ public class Player : MonoBehaviour
         transform.rotation=Quaternion.Euler(0, 0, 0);
     }
     public void Ganar(){
+        // obtener la posicion en y del jugador en este momento
+        // guardarla en una variable
+        float altura = transform.position.y;
+        Debug.Log(altura);
+        if (altura >= 1.65f){
+            AumentarPuntos(5000);
+        }
+        else if (altura<1.65f && altura >= 1.33f ){
+            AumentarPuntos(1000);
+        }
+        else if (altura<1.33f && altura > 0.57f ){
+            AumentarPuntos(100);
+        }
         StartCoroutine(animGanar());
     }
     IEnumerator animBajar(){

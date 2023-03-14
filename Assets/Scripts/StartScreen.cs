@@ -8,6 +8,9 @@ public class StartScreen : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("puntos", 0);
+        PlayerPrefs.SetInt("vidas", 3);
+        PlayerPrefs.SetInt("monedas", 0);
         // Ocultamos el cursor
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

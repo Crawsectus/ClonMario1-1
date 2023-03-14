@@ -68,9 +68,11 @@ public class Goomba : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Fuego")){
             MorirFuego();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(100);
         }
         if (collision.gameObject.CompareTag("LSD")){
             MorirFuego();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(100);
         }
         if (collision.gameObject.CompareTag("Player")){
             ContactPoint2D contact = collision.contacts[0];

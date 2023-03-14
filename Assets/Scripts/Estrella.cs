@@ -23,6 +23,7 @@ public class Estrella : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")){
             collision.gameObject.GetComponent<Player>().Estrella();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(1000);
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Ground"))

@@ -37,6 +37,7 @@ public class Caparazon : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("Player")){
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(100);
             ContactPoint2D contact = collision.contacts[0];
             float dotProduct = Vector2.Dot(contact.normal, Vector2.up);
             if (dotProduct < -0.5f)

@@ -14,6 +14,7 @@ public class Flor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("LSD") || collision.gameObject.CompareTag("Invencible")){
             collision.gameObject.GetComponent<Player>().CrecerFuego();
+            collision.gameObject.GetComponent<Player>().AumentarPuntos(1000);
             Destroy(gameObject);
         }
     }
