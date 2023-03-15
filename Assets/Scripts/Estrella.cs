@@ -7,6 +7,7 @@ public class Estrella : MonoBehaviour
     public float speed = 1.0f;	
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private Collider2D col; // Componente Collider2D del objeto
+    public GameObject puntaje;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,8 @@ public class Estrella : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")){
             collision.gameObject.GetComponent<Player>().Estrella();
+            StartCoroutine(mostrarPuntos());
             collision.gameObject.GetComponent<Player>().AumentarPuntos(1000);
-            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -35,5 +36,13 @@ public class Estrella : MonoBehaviour
                 speed= -speed;
             }
         }
+    }
+    IEnumerator mostrarPuntos(){
+        Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+        GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+        puntajeObject.GetComponent<TextMesh>().text="1000";
+        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
+        Destroy(puntajeObject);
     }
 }

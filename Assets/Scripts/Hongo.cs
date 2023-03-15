@@ -10,6 +10,7 @@ public class Hongo : MonoBehaviour
     public bool tipoHongo=true;
     private bool flag=false;
 
+    public GameObject puntaje;
     public bool isVida;
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,14 @@ public class Hongo : MonoBehaviour
             if (tipoHongo==true){
                 collision.gameObject.GetComponent<Player>().Crecer();
             }else{
+                StartCoroutine(mostrarPuntos("1up"));
                 collision.gameObject.GetComponent<Player>().AumentarVidas();
             }
             if (!isVida){
+                StartCoroutine(mostrarPuntos("1000"));
                 collision.gameObject.GetComponent<Player>().AumentarPuntos(1000);
             }
-            Destroy(gameObject);
+
         }
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -46,5 +49,13 @@ public class Hongo : MonoBehaviour
                 speed= -speed;
             }
         }
+    }
+    IEnumerator mostrarPuntos(string obtenidos){
+        Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+        GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+        puntajeObject.GetComponent<TextMesh>().text=obtenidos;
+        yield return new WaitForSeconds(0.1f);
+        Destroy(puntajeObject);
+        Destroy(gameObject);
     }
 }

@@ -9,6 +9,7 @@ public class Goomba : MonoBehaviour
     public PuntosFlotantes prefabPuntosFlotantes;
     public AudioSource audioMorir;
     private Renderer enemyRenderer;
+    public GameObject puntaje;
     private Rigidbody2D rb; // Componente Rigidbody2D del objeto
     private SpriteRenderer sr;
     private Collider2D col; // Componente Collider2D del objeto
@@ -93,8 +94,6 @@ public class Goomba : MonoBehaviour
                 if (muelto==false){
                     int puntosObtenidos = 100;
                     // Crea el objeto de texto flotante y lo muestra encima del enemigo
-                    PuntosFlotantes puntosFlotantes = Instantiate(prefabPuntosFlotantes, transform.position, Quaternion.identity);
-                    puntosFlotantes.MostrarPuntos(puntosObtenidos);
                     collision.gameObject.GetComponent<Player>().AumentarPuntos(puntosObtenidos);
                 }
                 Morir();
@@ -149,8 +148,13 @@ public class Goomba : MonoBehaviour
     }
     IEnumerator MorirAhoraSi()
     {
+            Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+            GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+            puntajeObject.GetComponent<TextMesh>().text="100";
            yield return new WaitForSeconds(0.5f);
+           Destroy(puntajeObject);
            Destroy(gameObject);
+           
         
     }
 }

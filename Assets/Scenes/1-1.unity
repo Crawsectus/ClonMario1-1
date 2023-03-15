@@ -2831,6 +2831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.8
   tipoHongo: 1
+  puntaje: {fileID: 1403612599}
   isVida: 0
 --- !u!70 &217761774
 CapsuleCollider2D:
@@ -4804,6 +4805,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -5756,6 +5758,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &413988738
 Animator:
@@ -9303,6 +9306,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -9528,6 +9532,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -10463,6 +10468,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &828402914
 Animator:
@@ -10934,6 +10940,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &835159707
 Animator:
@@ -11397,6 +11404,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -12183,6 +12191,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -12324,6 +12333,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -13851,6 +13861,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!70 &1129181794
 CapsuleCollider2D:
@@ -14501,6 +14512,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -14822,7 +14834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223253666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.135, y: 0.56, z: 0}
+  m_LocalPosition: {x: -16, y: 0.56, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14866,6 +14878,7 @@ MonoBehaviour:
   CD: 0
   grounded: 0
   saltar: 0
+  puntaje: {fileID: 1403612599}
   jumpForce: 3.7
   MultiplicadorCancelarSalto: 0
 --- !u!95 &1223253672
@@ -15134,6 +15147,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1227129209
 Animator:
@@ -15531,6 +15545,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1241338799
 Animator:
@@ -16495,6 +16510,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -17570,6 +17586,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1380598397
 Animator:
@@ -18238,6 +18255,66 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &1396614407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396614410}
+  - component: {fileID: 1396614409}
+  - component: {fileID: 1396614408}
+  m_Layer: 0
+  m_Name: VisualScripting SceneVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1396614408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396614407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1396614409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396614407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &1396614410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396614407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399128312
 GameObject:
   m_ObjectHideFlags: 0
@@ -18666,6 +18743,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1403612599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403612602}
+  - component: {fileID: 1403612601}
+  - component: {fileID: 1403612600}
+  m_Layer: 0
+  m_Name: Puntos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &1403612600
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403612599}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 0.05
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 250ba1c729eb20e4f932341cdd9076b9, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1403612601
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403612599}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 250ba1c729eb20e4f932341cdd9076b9, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &1403612602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403612599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1, y: -0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411019446
 GameObject:
   m_ObjectHideFlags: 0
@@ -19328,6 +19502,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -19925,7 +20100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0024881363, y: 0}
+  m_Offset: {x: 0.0024881363, y: 0.08480433}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19936,7 +20111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.025659561, y: 1.68}
+  m_Size: {x: 0.025659561, y: 1.5103915}
   m_EdgeRadius: 0
 --- !u!114 &1510349591
 MonoBehaviour:
@@ -20424,6 +20599,7 @@ MonoBehaviour:
   audioMorir: {fileID: 479231533}
   muelto: 0
   caparazon: {fileID: 1989941002}
+  puntaje: {fileID: 1403612599}
 --- !u!50 &1528082395
 Rigidbody2D:
   serializedVersion: 4
@@ -20759,6 +20935,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1552260864
 Animator:
@@ -21773,6 +21950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a769979b1f74e1beb91a10acd99aba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntaje: {fileID: 1403612599}
 --- !u!1 &1665724051
 GameObject:
   m_ObjectHideFlags: 0
@@ -21895,6 +22073,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 7
   monedas: 0
   cosa: 0
@@ -22124,6 +22303,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1666711868
 Animator:
@@ -22698,6 +22878,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1695770038
 Animator:
@@ -23218,6 +23399,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &1726756665
 Animator:
@@ -23918,6 +24100,7 @@ MonoBehaviour:
   audioGold: {fileID: 1585987270}
   velocidadMoneda: 2
   monedaPrefab: {fileID: 474151146}
+  puntaje: {fileID: 1403612599}
   contador: 0
   monedas: 0
   cosa: 0
@@ -25224,6 +25407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
   tipoHongo: 0
+  puntaje: {fileID: 1403612599}
   isVida: 1
 --- !u!1 &1982588829
 GameObject:
@@ -26292,6 +26476,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &2037807956
 Animator:
@@ -27169,6 +27354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  puntaje: {fileID: 1403612599}
 --- !u!1 &2084832967
 GameObject:
   m_ObjectHideFlags: 0
@@ -27710,6 +27896,7 @@ MonoBehaviour:
   speed: 0.35
   prefabPuntosFlotantes: {fileID: 1232049062}
   audioMorir: {fileID: 479231533}
+  puntaje: {fileID: 1403612599}
   muelto: 0
 --- !u!95 &2143741639
 Animator:

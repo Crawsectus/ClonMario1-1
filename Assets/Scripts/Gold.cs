@@ -10,6 +10,7 @@ public class Gold : MonoBehaviour
     public AudioSource audioGold;
     public float velocidadMoneda = 2f; // La velocidad a la que la moneda se moverá hacia arriba.
     public GameObject monedaPrefab; // GameObject de la moneda que aparecerá cuando el jugador golpee el bloque.
+    public GameObject puntaje;
     //public float alturaMoneda = 1f; // La altura a la que la moneda se moverá hacia arriba.
     public int contador=0;
     public int monedas;
@@ -53,6 +54,11 @@ public class Gold : MonoBehaviour
             monedaObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadMoneda);
             yield return new WaitForSeconds(0.25f);
             Destroy(monedaObject);
+            Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+            GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+            puntajeObject.GetComponent<TextMesh>().text="200";
+            yield return new WaitForSeconds(0.25f);
+            Destroy(puntajeObject);
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z);
             contador--;
         }

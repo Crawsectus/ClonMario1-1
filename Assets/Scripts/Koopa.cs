@@ -15,6 +15,7 @@ public class Koopa : MonoBehaviour
     public GameObject caparazon;
     private SpriteRenderer sr;
     private bool flag=false;
+    public GameObject puntaje;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,8 +84,9 @@ public class Koopa : MonoBehaviour
                     GameObject caparazonObject = Instantiate(caparazon, transform.position, Quaternion.identity);
                     flag=true;
                     collision.gameObject.GetComponent<Player>().AumentarPuntos(500);
+                    StartCoroutine(mostrarPuntos("500"));
                 }
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
             else if (contact.normal.x > 0)
             {
@@ -105,8 +107,7 @@ public class Koopa : MonoBehaviour
     }
     IEnumerator MorirAhoraSi()
     {
-        yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        StartCoroutine(mostrarPuntos("200"));
         
     }
     public void MorirFuego(){
@@ -116,5 +117,13 @@ public class Koopa : MonoBehaviour
         rb.AddForce(Vector2.up*2,ForceMode2D.Impulse);
         rb.AddForce(Vector2.right*1,ForceMode2D.Impulse);
         StartCoroutine(MorirAhoraSi());
+    }
+    IEnumerator mostrarPuntos(string obtenidos){
+        Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+        GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+        puntajeObject.GetComponent<TextMesh>().text=obtenidos;
+        yield return new WaitForSeconds(0.1f);
+        Destroy(puntajeObject);
+        Destroy(gameObject);
     }
 }

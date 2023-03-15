@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     public bool CD=false;
     public bool grounded = false;
     public bool saltar = false;
+    private bool flagVictoria=false;
+    public GameObject puntaje;
     [Header("Salto regulable")]
     [SerializeField] private float jumpForce;
     [Range(0, 1)] [SerializeField] private float MultiplicadorCancelarSalto;
@@ -411,14 +413,30 @@ public class Player : MonoBehaviour
     }
     IEnumerator animGanar(){
         audioMain.Stop();
-        audioVictoria.Play();
+        if (flagVictoria==false){
+            audioVictoria.Play();
+            flagVictoria=true;
+        }
         rb.constraints = RigidbodyConstraints2D.FreezePositionY;
         yield return new WaitForSeconds(1.2f); 
-        transform.position+=new Vector3(0.08f,0,0);
+        transform.position+=new Vector3(0.1f,0,0);
         transform.rotation=Quaternion.Euler(0, 180, 0);
         yield return new WaitForSeconds(0.8f); 
         rb.constraints = RigidbodyConstraints2D.None;
         transform.rotation=Quaternion.Euler(0, 0, 0);
+        yield return new WaitForSeconds(0.8f); 
+        anim.SetBool("isWalking",true);
+        while (transform.position.x<=15.84f){
+            transform.position += new Vector3(0.03f, 0,0); 
+            yield return new WaitForSeconds(0.1f); 
+        }
+    }
+    IEnumerator verPuntos(string puntosObt){
+        Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
+        GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
+        puntajeObject.GetComponent<TextMesh>().text=puntosObt;
+        yield return new WaitForSeconds(0.5f);
+        Destroy(puntajeObject);
     }
     public void Ganar(){
         // obtener la posicion en y del jugador en este momento
@@ -426,14 +444,18 @@ public class Player : MonoBehaviour
         float altura = transform.position.y;
         Debug.Log(altura);
         if (altura >= 1.65f){
+            StartCoroutine(verPuntos("5000"));
             AumentarPuntos(5000);
         }
         else if (altura<1.65f && altura >= 1.33f ){
+            StartCoroutine(verPuntos("1000"));
             AumentarPuntos(1000);
         }
         else if (altura<1.33f && altura > 0.57f ){
+            StartCoroutine(verPuntos("100"));
             AumentarPuntos(100);
         }
+        muelto=true;
         StartCoroutine(animGanar());
     }
     IEnumerator animBajar(){
