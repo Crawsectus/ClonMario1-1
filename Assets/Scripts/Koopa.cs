@@ -84,7 +84,7 @@ public class Koopa : MonoBehaviour
                     GameObject caparazonObject = Instantiate(caparazon, transform.position, Quaternion.identity);
                     flag=true;
                     collision.gameObject.GetComponent<Player>().AumentarPuntos(500);
-                    StartCoroutine(mostrarPuntos("500"));
+                    StartCoroutine(MorirAhoraSi("500"));
                 }
                 //Destroy(gameObject);
             }
@@ -105,20 +105,15 @@ public class Koopa : MonoBehaviour
     public void Destruir(){
 	Destroy(gameObject);
     }
-    IEnumerator MorirAhoraSi()
-    {
-        StartCoroutine(mostrarPuntos("200"));
-        
-    }
     public void MorirFuego(){
         sr.flipY=true;
         muelto=true;
         gameObject.layer = LayerMask.NameToLayer("Muerto");
         rb.AddForce(Vector2.up*2,ForceMode2D.Impulse);
         rb.AddForce(Vector2.right*1,ForceMode2D.Impulse);
-        StartCoroutine(MorirAhoraSi());
+        StartCoroutine(MorirAhoraSi("200"));
     }
-    IEnumerator mostrarPuntos(string obtenidos){
+    IEnumerator MorirAhoraSi(string obtenidos){
         Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
         GameObject puntajeObject = Instantiate(puntaje, posPuntos, Quaternion.identity);
         puntajeObject.GetComponent<TextMesh>().text=obtenidos;

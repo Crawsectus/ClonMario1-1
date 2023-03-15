@@ -430,6 +430,8 @@ public class Player : MonoBehaviour
             transform.position += new Vector3(0.03f, 0,0); 
             yield return new WaitForSeconds(0.1f); 
         }
+        Invoke("GameOver", 1f);
+
     }
     IEnumerator verPuntos(string puntosObt){
         Vector3 posPuntos=new Vector3(transform.position.x+0.05f,transform.position.y+0.15f,transform.position.z);
